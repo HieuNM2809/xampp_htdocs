@@ -2,8 +2,9 @@ const fs = require("fs");
 const {exec} = require('child_process')
 // const websiteUrl = 'https://nodejs.org/';
 // const websiteUrl = 'https://stackoverflow.com/';
-const websiteUrl = 'https://hieunm47.github.io/';
-var directoryPath = 'hieunm47-shoopee-'+Date.now();
+// const websiteUrl = 'https://hieunm47.github.io/';
+const websiteUrl = 'https://www.huytruong.design/';
+var directoryPath = 'huytruong-design-'+Date.now();
 
 
 exec(`node-site-downloader download -s ${websiteUrl} -d ${websiteUrl} -o ${directoryPath} -v --include-images`,(err,stdout,stderr) =>{
