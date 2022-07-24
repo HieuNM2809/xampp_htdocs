@@ -1,0 +1,4 @@
+================== Link tham khảo  ========================================
+https://viblo.asia/p/l5-swagger-in-laravel-rest-apis-m68Z0x1AZkG
+https://giangmd.net/laravel-swagger-la-gi-huong-dan-tao-swagger-trong-laravel/
+
