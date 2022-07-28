@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><!-- Optimized with WP Meteor v2.3.10 - https://wordpress.org/plugins/wp-meteor/ --><script>var _wpmeteor={"rdelay":86400000,"elementor-animations":true,"elementor-pp":true,"v":"2.3.10"};if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]wpmeteordisable/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?wpmeteordisable=1"}else{document.location.href=href.replace("#","?wpmeteordisable=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&wpmeteordisable=1"}else{document.location.href=href.replace("#","&wpmeteordisable=1#")}}}}</script><script>!function(t){var e={};function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)n.d(r,o,function(e){return t[e]}.bind(null,o));return r},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="/",n(n.s=0)}([function(t,e,n){t.exports=n(1)},function(t,e,n){"use strict";n.r(e);var r=new(function(){function t(){this.l=[]}var e=t.prototype;return e.emit=function(t,e){void 0===e&&(e=null),this.l[t]&&this.l[t].forEach((function(t){return t(e)}))},e.on=function(t,e){var n;(n=this.l)[t]||(n[t]=[]),this.l[t].push(e)},e.off=function(t,e){this.l[t]=(this.l[t]||[]).filter((function(t){return t!==e}))},t}()),o=new Date,i=document,a=function(){function t(){this.known=[]}var e=t.prototype;return e.init=function(){var t,e=this,n=!1,o=function(t){if(!n&&t&&t.fn&&!t.__wpmeteor){var r=function(e){return i.addEventListener("DOMContentLoaded",(function(n){e.bind(i)(t,n)})),this};e.known.push([t,t.fn.ready,t.fn.init.prototype.ready]),t.fn.ready=r,t.fn.init.prototype.ready=r,t.__wpmeteor=!0}return t};window.jQuery&&(t=o(window.jQuery)),Object.defineProperty(window,"jQuery",{get:function(){return t},set:function(e){return t=o(e)}}),r.on("l",(function(){return n=!0}))},e.unmock=function(){this.known.forEach((function(t){var e=t[0],n=t[1],r=t[2];e.fn.ready=n,e.fn.init.prototype.ready=r}))},t}(),c={};!function(t,e){try{var n=Object.defineProperty({},e,{get:function(){c[e]=!0}});t.addEventListener(e,null,n),t.removeEventListener(e,null,n)}catch(t){}}(window,"passive");var u=c,f=window,d=document,s=["mouseover","keydown","touchmove","touchend","wheel"],l=["mouseover","mouseout","touchstart","touchmove","touchend","click"],p="data-wpmeteor-",v=function(){function t(){}return t.prototype.init=function(t){var e=!1,n=!1,o=function t(o){e||(e=!0,s.forEach((function(e){return d.body.removeEventListener(e,t,u)})),clearTimeout(n),location.href.match(/wpmeteornopreload/)||r.emit("pre"),r.emit("fi"))},i=function(t){var e=new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0});return Object.defineProperty(e,"target",{writable:!1,value:t.target}),e};t<1e4&&r.on("i",(function(){e||(n=setTimeout(o,t))}));var a=[],c=function(t){t.target&&"dispatchEvent"in t.target&&("click"===t.type?(t.preventDefault(),t.stopPropagation(),a.push(i(t))):"touchmove"!==t.type&&a.push(t),t.target.setAttribute(p+t.type,!0))};r.on("l",(function(){var t;for(l.forEach((function(t){return f.removeEventListener(t,c)}));t=a.shift();){var e=t.target;e.getAttribute(p+"touchstart")&&e.getAttribute(p+"touchend")&&!e.getAttribute(p+"click")?(e.getAttribute(p+"touchmove")||(e.removeAttribute(p+"touchmove"),a.push(i(t))),e.removeAttribute(p+"touchstart"),e.removeAttribute(p+"touchend")):e.removeAttribute(p+t.type),e.dispatchEvent(t)}}));d.addEventListener("DOMContentLoaded",(function t(){s.forEach((function(t){return d.body.addEventListener(t,o,u)})),l.forEach((function(t){return f.addEventListener(t,c)})),d.removeEventListener("DOMContentLoaded",t)}))},t}(),m=document,h=m.createElement("span");h.setAttribute("id","elementor-device-mode"),h.setAttribute("class","elementor-screen-only");var y=window,b=document,g=b.documentElement,w=function(t){return t.getAttribute("class")||""},E=function(t,e){return t.setAttribute("class",e)},L=function(){window.addEventListener("load",(function(){var t=(m.body.appendChild(h),getComputedStyle(h,":after").content.replace(/"/g,"")),e=Math.max(g.clientWidth||0,y.innerWidth||0),n=Math.max(g.clientHeight||0,y.innerHeight||0),o=["_animation_"+t,"animation_"+t,"_animation","_animation","animation"];Array.from(b.querySelectorAll(".elementor-invisible")).forEach((function(t){var i=t.getBoundingClientRect();if(i.top+y.scrollY<=n&&i.left+y.scrollX<e)try{var a=JSON.parse(t.getAttribute("data-settings"));if(a.trigger_source)return;for(var c,u=a._animation_delay||a.animation_delay||0,f=0;f<o.length;f++)if(a[o[f]]){o[f],c=a[o[f]];break}if(c){var d=w(t),s="none"===c?d:d+" animated "+c,l=setTimeout((function(){E(t,s.replace(/\belementor\-invisible\b/,"")),o.forEach((function(t){return delete a[t]})),t.setAttribute("data-settings",JSON.stringify(a))}),u);r.on("fi",(function(){clearTimeout(l),E(t,w(t).replace(new RegExp("\b"+c+"\b"),""))}))}}catch(t){console.error(t)}}))}))},S=document,A="querySelectorAll",O="data-in-mega_smartmenus",_="DOMContentLoaded",j="readystatechange",P="message",k=console.error;!function(t,e,n,i,c,u,f,d,s){var l,p,m=t.constructor.name+"::",h=e.constructor.name+"::",y=function(e,n){n=n||t;for(var r=0;r<this.length;r++)e.call(n,this[r],r,this)};"NodeList"in t&&!NodeList.prototype.forEach&&(NodeList.prototype.forEach=y),"HTMLCollection"in t&&!HTMLCollection.prototype.forEach&&(HTMLCollection.prototype.forEach=y),_wpmeteor["elementor-animations"]&&L(),_wpmeteor["elementor-pp"]&&function(){var t=S.createElement("div");t.innerHTML='<span class="sub-arrow --wp-meteor"><i class="fa" aria-hidden="true"></i></span>';var e=t.firstChild;S.addEventListener("DOMContentLoaded",(function(){Array.from(S[A](".pp-advanced-menu ul")).forEach((function(t){if(!t.getAttribute(O)){(t.getAttribute("class")||"").match(/\bmega\-menu\b/)&&t[A]("ul").forEach((function(t){t.setAttribute(O,!0)}));var n=function(t){for(var e=[];t=t.previousElementSibling;)e.push(t);return e}(t),r=n.filter((function(t){return t})).filter((function(t){return"A"===t.tagName})).pop();if(r||(r=n.map((function(t){return Array.from(t[A]("a"))})).filter((function(t){return t})).flat().pop()),r){var o=e.cloneNode(!0);r.appendChild(o),new MutationObserver((function(t){t.forEach((function(t){t.addedNodes.forEach((function(t){if(1===t.nodeType&&"SPAN"===t.tagName)try{r.removeChild(o)}catch(t){}}))}))})).observe(r,{childList:!0})}}}))}))}();var b,g,w=[],E=[],x={},C=!1,T=!1,M=setTimeout;var N=e[n].bind(e),R=e[i].bind(e),H=t[n].bind(t),D=t[i].bind(t);"undefined"!=typeof EventTarget&&(b=EventTarget.prototype.addEventListener,g=EventTarget.prototype.removeEventListener,N=b.bind(e),R=g.bind(e),H=b.bind(t),D=g.bind(t));var z,q=e.createElement.bind(e),B=e.__proto__.__lookupGetter__("readyState").bind(e);Object.defineProperty(e,"readyState",{get:function(){return z||B()},set:function(t){return z=t}});var Q=function(t){return E.filter((function(e,n){var r=e[0],o=(e[1],e[2]);if(!(t.indexOf(r.type)<0)){o||(o=r.target);try{for(var i=o.constructor.name+"::"+r.type,a=0;a<x[i].length;a++){if(x[i][a])if(!W[i+"::"+n+"::"+a])return!0}}catch(t){}}})).length},W={},I=function(t){E.forEach((function(n,r){var o=n[0],i=n[1],a=n[2];if(!(t.indexOf(o.type)<0)){a||(a=o.target);try{var c=a.constructor.name+"::"+o.type;if((x[c]||[]).length)for(var u=0;u<x[c].length;u++){var f=x[c][u];if(f){var d=c+"::"+r+"::"+u;if(!W[d]){W[d]=!0,e.readyState=i;try{f.hasOwnProperty("prototype")&&f.prototype.constructor!==f?f(o):f.bind(a)(o)}catch(t){k(t,f)}}}}}catch(t){k(t)}}}))};N(_,(function(t){E.push([t,e.readyState,e])})),N(j,(function(t){E.push([t,e.readyState,e])})),H(_,(function(n){E.push([n,e.readyState,t])})),H(d,(function(n){E.push([n,e.readyState,t]),G||I([_,j,P,d])}));var J=function(n){E.push([n,e.readyState,t])};H(P,J),r.on("fi",(function(){T=!0,G=!0,e.readyState="loading",M(X)}));H(d,(function t(){C=!0,T&&!G&&(e.readyState="loading",M(X)),D(d,t)})),(new v).init(_wpmeteor.rdelay);var F=new a;F.init();var G=!1,X=function n(){var o=w.shift();if(o)if(o[c]("data-src"))o.hasAttribute("data-async")?(U(o),M(n)):U(o,n);else if("javascript/blocked"==o.type)U(o),M(n);else if(o.hasAttribute("data-wpmeteor-onload")){var i=o[c]("data-wpmeteor-onload");try{new Function(i).call(o)}catch(t){k(t)}M(n)}else M(n);else if(Q([_,j,P]))I([_,j,P]),M(n);else if(T&&C)if(Q([d,P]))I([d,P]),M(n);else{if(t.RocketLazyLoadScripts)try{RocketLazyLoadScripts.run()}catch(t){k(t)}e.readyState="complete",D(P,J),(x[m+"message"]||[]).forEach((function(t){H(P,t)})),F.unmock(),Z=N,$=R,nt=H,rt=D,G=!1,setTimeout((function(){return r.emit("l")}))}else G=!1},Y=function(t){for(var n=e.createElement("SCRIPT"),r=t.attributes,o=r.length-1;o>=0;o--)n.setAttribute(r[o].name,r[o].value);return n.bypass=!0,n.type=t.hasAttribute("data-wpmeteor-module")?"module":"text/javascript",(t.text||"").match(/^\s*class RocketLazyLoadScripts/)?n.text=t.text.replace(/^\s*class RocketLazyLoadScripts/,"window.RocketLazyLoadScripts=class").replace("RocketLazyLoadScripts.run();",""):n.text=t.text,n[f]("data-wpmeteor-after"),n},K=function(t,e){var n=t.parentNode;n&&n.replaceChild(e,t)},U=function(t,e){if(t[c]("data-src")){var r=Y(t),o=b?b.bind(r):r[n].bind(r);if(e){var i=function(){return M(e)};o(d,i),o(s,i)}r.src=t[c]("data-src"),r[f]("data-src"),K(t,r)}else"javascript/blocked"===t.type?K(t,Y(t)):onLoad&&onLoad()},V=function(t,e){var n=(x[t]||[]).indexOf(e);if(n>=0)return x[t][n]=void 0,!0},Z=function(t,e){if(e&&(t===_||t===j)){var n=h+t;return x[n]=x[n]||[],void x[n].push(e)}for(var r=arguments.length,o=new Array(r>2?r-2:0),i=2;i<r;i++)o[i-2]=arguments[i];return N.apply(void 0,[t,e].concat(o))},$=function(t,e){t===_&&V(h+t,e);return R(t,e)};Object.defineProperties(e,((l={})[n]={get:function(){return Z},set:function(){return Z}},l[i]={get:function(){return $},set:function(){return $}},l)),r.on("pre",(function(){return w.forEach((function(t){var n=t[c]("data-src");if(n){var r=q("link");r.rel="pre"+d,r.as="script",r.href=n,r.crossorigin=!0,e.head.appendChild(r)}}))})),N(_,(function(){e.querySelectorAll("script[data-wpmeteor-after]").forEach((function(t){return w.push(t)}));var t=["link"].map((function(t){return t+"[data-wpmeteor-onload]"})).join(",");e.querySelectorAll(t).forEach((function(t){return w.push(t)}))}));var tt=function(t){if(e.currentScript)try{var n=e.currentScript.parentElement,r=e.currentScript.nextSibling,i=document.createElement("div");i.innerHTML=t,Array.from(i.childNodes).forEach((function(t){"SCRIPT"===t.nodeName?n.insertBefore(Y(t),r):n.insertBefore(t,r)}))}catch(t){console.error(t)}else k((new Date-o)/1e3,"document.currentScript not set",t)},et=function(t){return tt(t+"\n")};Object.defineProperties(e,{write:{get:function(){return tt},set:function(t){return tt=t}},writeln:{get:function(){return et},set:function(t){return et=t}}});var nt=function(t,e){if(e&&(t===d||t===_||t===P)){var n=t===_?h+t:m+t;return x[n]=x[n]||[],void x[n].push(e)}for(var r=arguments.length,o=new Array(r>2?r-2:0),i=2;i<r;i++)o[i-2]=arguments[i];return H.apply(void 0,[t,e].concat(o))},rt=function(t,e){t===d&&V(t===_?h+t:m+t,e);return D(t,e)};Object.defineProperties(t,((p={})[n]={get:function(){return nt},set:function(){return nt}},p[i]={get:function(){return rt},set:function(){return rt}},p));var ot=function(t){var e;return{get:function(){return e},set:function(n){return e&&V(t,n),x[t]=x[t]||[],x[t].push(n),e=n}}},it=ot(m+d);Object.defineProperty(t,"onload",it),N(_,(function(){Object.defineProperty(e.body,"onload",it)})),Object.defineProperty(e,"onreadystatechange",ot(h+j)),Object.defineProperty(t,"onmessage",ot(m+P));var at=1,ct=function(){--at||r.emit("i")};H(d,(function t(){M((function(){e.querySelectorAll("img").forEach((function(t){if(!t.complete&&(t.currentSrc||t.src)&&"lazy"==!(t.loading||"").toLowerCase()||(r=t.getBoundingClientRect(),o=window.innerHeight||document.documentElement.clientHeight,i=window.innerWidth||document.documentElement.clientWidth,r.top>=-1*o*1&&r.left>=-1*i*1&&r.bottom<=2*o&&r.right<=2*i)){var e=new Image;e[n](d,ct),e[n](s,ct),e.src=t.currentSrc||t.src,at++}var r,o,i})),ct()})),D(d,t)}));var ut=Object.defineProperty;Object.defineProperty=function(n,r,o){return n===t&&["jQuery","onload"].indexOf(r)>=0||(n===e||n===e.body)&&["readyState","write"].indexOf(r)>=0?n:ut(n,r,o)},Object.defineProperties=function(t,e){for(var n in e)Object.defineProperty(t,n,e[n]);return t}}(window,document,"addEventListener","removeEventListener","getAttribute",0,"removeAttribute","load","error")}]);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://haisanngoctrinh.com/xmlrpc.php">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet"> 
+<meta property="fb:app_id" content>
+<meta property="fb:admins" content>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-async data-src="https://www.googletagmanager.com/gtag/js?id=UA-215101163-1"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-215101163-1');
+</script>					<script data-wpmeteor-after="REORDER" type="javascript/blocked">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<!-- This site is optimized with the Yoast SEO plugin v17.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Ngọc Trinh Chuyên Phân Phối Sỉ Và Lẻ Hải Sản - Hải Sản Ngọc Trinh</title>
+<meta name="description" content="Hải Sản Ngọc Trinh chuyên phân phối các loại hải sản tươi sống tại TPHCM như ngao - sò - ốc - cá - mực - nghẹ. Giao nhanh trong vòng 2h">
+<link rel="canonical" href="https://haisanngoctrinh.com/">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ngọc Trinh Chuyên Phân Phối Sỉ Và Lẻ Hải Sản - Hải Sản Ngọc Trinh">
+<meta property="og:description" content="Hải Sản Ngọc Trinh chuyên phân phối các loại hải sản tươi sống tại TPHCM như ngao - sò - ốc - cá - mực - nghẹ. Giao nhanh trong vòng 2h">
+<meta property="og:url" content="https://haisanngoctrinh.com/">
+<meta property="og:site_name" content="Hải Sản Ngọc Trinh">
+<meta property="article:modified_time" content="2021-11-27T10:05:04+00:00">
+<meta property="og:image" content="https://haisanngoctrinh.com/wp-content/uploads/2021/11/han-son-tuoi-song.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="356">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:label1" content="Ước tính thời gian đọc">
+<meta name="twitter:data1" content="1 phút">
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://haisanngoctrinh.com/#website","url":"https://haisanngoctrinh.com/","name":"H\u1ea3i S\u1ea3n Ng\u1ecdc Trinh","description":"H\u1ea3i S\u1ea3n Ngon M\u1ed7i Ng\u00e0y","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://haisanngoctrinh.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"vi"},{"@type":"ImageObject","@id":"https://haisanngoctrinh.com/#primaryimage","inLanguage":"vi","url":"https://haisanngoctrinh.com/wp-content/uploads/2021/11/han-son-tuoi-song.jpg","contentUrl":"https://haisanngoctrinh.com/wp-content/uploads/2021/11/han-son-tuoi-song.jpg","width":600,"height":356},{"@type":"WebPage","@id":"https://haisanngoctrinh.com/#webpage","url":"https://haisanngoctrinh.com/","name":"Ng\u1ecdc Trinh Chuy\u00ean Ph\u00e2n Ph\u1ed1i S\u1ec9 V\u00e0 L\u1ebb H\u1ea3i S\u1ea3n - H\u1ea3i S\u1ea3n Ng\u1ecdc Trinh","isPartOf":{"@id":"https://haisanngoctrinh.com/#website"},"primaryImageOfPage":{"@id":"https://haisanngoctrinh.com/#primaryimage"},"datePublished":"2021-11-09T15:21:54+00:00","dateModified":"2021-11-27T10:05:04+00:00","description":"H\u1ea3i S\u1ea3n Ng\u1ecdc Trinh chuy\u00ean ph\u00e2n ph\u1ed1i c\u00e1c lo\u1ea1i h\u1ea3i s\u1ea3n t\u01b0\u01a1i s\u1ed1ng t\u1ea1i TPHCM nh\u01b0 ngao - s\u00f2 - \u1ed1c - c\u00e1 - m\u1ef1c - ngh\u1eb9. Giao nhanh trong v\u00f2ng 2h","breadcrumb":{"@id":"https://haisanngoctrinh.com/#breadcrumb"},"inLanguage":"vi","potentialAction":[{"@type":"ReadAction","target":["https://haisanngoctrinh.com/"]}]},{"@type":"BreadcrumbList","@id":"https://haisanngoctrinh.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang ch\u1ee7"}]}]}</script>
+<!-- / Yoast SEO plugin. -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Hải Sản Ngọc Trinh &raquo;" href="https://haisanngoctrinh.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Hải Sản Ngọc Trinh &raquo;" href="https://haisanngoctrinh.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hải Sản Ngọc Trinh &raquo; Trang Chủ Dòng phản hồi" href="https://haisanngoctrinh.com/trang-mau/feed/">
+<!-- <link rel='stylesheet' id='wp-block-library-css'  href='https://haisanngoctrinh.com/wp-includes/css/dist/block-library/style.min.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wc-blocks-vendors-style-css'  href='https://haisanngoctrinh.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=6.1.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wc-blocks-style-css'  href='https://haisanngoctrinh.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=6.1.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='jquery-selectBox-css'  href='https://haisanngoctrinh.com/wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox.css?ver=1.2.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='yith-wcwl-font-awesome-css'  href='https://haisanngoctrinh.com/wp-content/plugins/yith-woocommerce-wishlist/assets/css/font-awesome.css?ver=4.7.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'  href='//haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/css/prettyPhoto.css?ver=3.1.6' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='yith-wcwl-main-css'  href='https://haisanngoctrinh.com/wp-content/plugins/yith-woocommerce-wishlist/assets/css/style.css?ver=3.2.0' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="css/kle5_6.css" media="all">
+<style id="yith-wcwl-main-inline-css" type="text/css">
+.yith-wcwl-share li a{color: #FFFFFF;}.yith-wcwl-share li a:hover{color: #FFFFFF;}.yith-wcwl-share a.facebook{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.facebook:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.twitter{background: #45AFE2; background-color: #45AFE2;}.yith-wcwl-share a.twitter:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.pinterest{background: #AB2E31; background-color: #AB2E31;}.yith-wcwl-share a.pinterest:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.email{background: #FBB102; background-color: #FBB102;}.yith-wcwl-share a.email:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.whatsapp{background: #00A901; background-color: #00A901;}.yith-wcwl-share a.whatsapp:hover{background: #39599E; background-color: #39599E;}
+.fa-heart-o::before {
+content: "\f004";
+}
+</style>
+<!-- <link rel='stylesheet' id='apsw-styles-css'  href='https://haisanngoctrinh.com/wp-content/plugins/advanced-product-search-for-woo/assets/front/css/style.css?ver=1642913484' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="css/kle5_3.css" media="all">
+<style id="apsw-styles-inline-css" type="text/css">
+.apsw-search-wrap {max-width:999px;}
+.apsw-search-wrap .apsw-search-form input[type='search'],.apsw-search-wrap.apsw_search_form_style_4 button.apsw-search-btn,.apsw-search-wrap.apsw_search_form_style_5 button.apsw-search-btn,.apsw-search-wrap.apsw_search_form_style_6 button.apsw-search-btn,.apsw-search-wrap .apsw-search-btn{ height:45px; line-height: 45px }
+.apsw-search-wrap .apsw-select-box-wrap{height:45px;}
+.apsw-search-wrap .apsw-category-items{ line-height: 45px; }
+.apsw_ajax_result{ top:46px; }
+.apsw-search-wrap .apsw-search-form{ background:#fff; border-color:#e2e1e6; }.apsw-search-wrap .apsw-category-items,.apsw-search-wrap .apsw-search-form input[type='search']{color:#43454b; }.apsw-search-wrap.apsw_search_form_style_4 button.apsw-search-btn, .apsw-search-wrap.apsw_search_form_style_5 button.apsw-search-btn, .apsw-search-wrap.apsw_search_form_style_6 button.apsw-search-btn{ color:#fff; background:#d83c3c; }.apsw-search-wrap .apsw-search-btn svg{ fill:#d83c3c; }.apsw-search-wrap.apsw_search_form_style_4 button.apsw-search-btn::before, .apsw-search-wrap.apsw_search_form_style_5 button.apsw-search-btn::before, .apsw-search-wrap.apsw_search_form_style_6 button.apsw-search-btn::before { border-color: transparent #d83c3c  transparent;; }.apsw_ajax_result .apsw_result_wrap{ background:#fff; border-color:#e2e1e6; } ul.apsw_data_container li:hover{ background:#d9d9d9; border-color:#e2e1e6; } ul.apsw_data_container li .apsw-name{ color:#000;} ul.apsw_data_container li .apsw-price{ color:#000;} ul.apsw_data_container li .apsw_result_excerpt{ color:#989499;} ul.apsw_data_container li .apsw_result_category{ color:#dd0000;} ul.apsw_data_container li.apsw_featured{ background:#C7FBAE;} ul.apsw_data_container li .apsw_result_on_sale{ background:#5391E8;} ul.apsw_data_container li .apsw_result_stock{ color:#dd0000;} 
+</style>
+<!-- <link rel='stylesheet' id='contact-form-7-css'  href='https://haisanngoctrinh.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.2' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='woocommerce-layout-css'  href='https://haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=5.9.0' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="css/kle5_2.css" media="all">
+<!-- <link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=5.9.0' type='text/css' media='only screen and (max-width: 768px)' /> -->
+<link rel="stylesheet" type="text/css" href="css/kle5.css" media="only screen and (max-width: 768px)">
+<!-- <link rel='stylesheet' id='woocommerce-general-css'  href='https://haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=5.9.0' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="css/kle5_1.css" media="all">
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<!-- <link rel='stylesheet' id='yit-style-css'  href='https://haisanngoctrinh.com/wp-content/plugins/yith-woocommerce-advanced-reviews/assets/css/yit-advanced-reviews.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='magnific-popup-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/css/magnific-popup.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='owl-carousel-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/css/owl.carousel.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='bootstrap-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/css/bootstrap.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='specia-custom-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/css/custom.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='specia-typography-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/css/typography.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='specia-widget-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/css/widget.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='animate-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/css/animate.min.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='specia-menus-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/css/menus.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='specia-woo-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/css/woo.css?ver=5.8.3' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='font-awesome-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/inc/fonts/fontawesome-pro/css/all.min.css?ver=all' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="css/kle5_5.css" media="all">
+<style id="font-awesome-inline-css" type="text/css">
+[data-font="FontAwesome"]:before {font-family: 'FontAwesome' !important;content: attr(data-icon) !important;speak: none !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;line-height: 1 !important;font-style: normal !important;-webkit-font-smoothing: antialiased !important;-moz-osx-font-smoothing: grayscale !important;}
+</style>
+<!-- <link rel='stylesheet' id='specia-style-css'  href='https://haisanngoctrinh.com/wp-content/themes/Vietz/style.css?ver=1637491740' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="css/kle5_4.css" media="all">
+<link rel="stylesheet" id="specia-fonts-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800%7CRaleway%3A400%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+<script src="js/2bewn_1.js" type="text/javascript"></script>
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script> -->
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script> -->
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" id="apsw-plugins-scripts-js-extra">
+/* <![CDATA[ */
+var apsw_localize = {"ajaxurl":"https:\/\/haisanngoctrinh.com\/wp-admin\/admin-ajax.php","view_text":"Kh\u00f4ng c\u00f3 s\u1ea3n ph\u1ea9m \u0111\u01b0\u1ee3c t\u00ecm th\u1ea5y ph\u00f9 h\u1ee3p v\u1edbi danh m\u1ee5c l\u1ef1a ch\u1ecdn c\u1ee7a b\u1ea1n!","text":{"working":"Working..."}};
+/* ]]> */
+</script>
+<script src="js/2bewn.js" type="text/javascript"></script>
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/plugins/advanced-product-search-for-woo/assets/front/js/scripts.js?ver=5.8.3' id='apsw-plugins-scripts-js'></script> -->
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" id="attachments-script-js-extra">
+/* <![CDATA[ */
+var attach = {"limit_multiple_upload":"0"};
+/* ]]> */
+</script>
+<script src="js/2bewn_2.js" type="text/javascript"></script>
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/plugins/yith-woocommerce-advanced-reviews/assets/js/ywar-attachments.js?ver=5.8.3' id='attachments-script-js'></script> -->
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/themes/Vietz/js/jquery.magnific-popup.js?ver=5.8.3' id='magnific-popup-js'></script> -->
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/themes/Vietz/js/owl.carousel.min.js?ver=5.8.3' id='owl-carousel-js'></script> -->
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/themes/Vietz/js/bootstrap.min.js?ver=5.8.3' id='bootstrap-js'></script> -->
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/themes/Vietz/js/jquery.simple-text-rotator.min.js?ver=5.8.3' id='jquery-text-rotator-js'></script> -->
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/themes/Vietz/js/jquery.sticky.js?ver=5.8.3' id='jquery-sticky-js'></script> -->
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/themes/Vietz/js/wow.min.js?ver=5.8.3' id='wow-min-js'></script> -->
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/themes/Vietz/js/component.min.js?ver=5.8.3' id='specia-service-component-js'></script> -->
+<!-- <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://haisanngoctrinh.com/wp-content/themes/Vietz/js/custom.js?ver=5.8.3' id='specia-custom-js-js'></script> -->
+<link rel="https://api.w.org/" href="https://haisanngoctrinh.com/wp-json/"><link rel="alternate" type="application/json" href="https://haisanngoctrinh.com/wp-json/wp/v2/pages/2"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://haisanngoctrinh.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://haisanngoctrinh.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.8.3">
+<meta name="generator" content="WooCommerce 5.9.0">
+<link rel="shortlink" href="https://haisanngoctrinh.com/">
+<link rel="alternate" type="application/json+oembed" href="https://haisanngoctrinh.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhaisanngoctrinh.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://haisanngoctrinh.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhaisanngoctrinh.com%2F&#038;format=xml">
+<meta name="framework" content="Redux 4.3.1">	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+<link rel="icon" href="images/cropped-cropped-logo-NGOC-TRINH-32x32.png" sizes="32x32">
+<link rel="icon" href="images/cropped-cropped-logo-NGOC-TRINH-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="images/cropped-cropped-logo-NGOC-TRINH-180x180.png">
+<meta name="msapplication-TileImage" content="https://haisanngoctrinh.com/wp-content/uploads/2020/03/cropped-cropped-logo-NGOC-TRINH-270x270.png">
+</head>
+<body data-rsssl="1" class="home page-template page-template-templates page-template-template-homepage-one page-template-templatestemplate-homepage-one-php page page-id-2 theme-Vietz woocommerce-no-js">
+<div id="page-wrapper" class="woocommerce">
+<header role="banner">
+<nav class="navbar navbar-default sticky-nav" role="navigation">
+<div class="container">
+<div class="header-navbar-mobile">
+<a class="navbar-brand" href="https://haisanngoctrinh.com/">
+<img src="images/logo.jpg" alt>
+</a>
+<h1 class="site-description">Hải Sản Ngon Mỗi Ngày</h1>
+<a id="showmenu">
+<span class="hamburger hamburger--collapse">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</span>
+</a>
+<!-- /End Contact Info -->
+<div class="header-search-wrap">
+<button type="button" data-toggle="dropdown" class="btn dropdown-toggle"><img src="images/ic-search.png" alt></button>
+<div class="dropdown-search dropdown-menu">
+<div class="apsw-search-wrap apsw_search_form_style_1"><form role="search" class="apsw-search-form both" autocomplete="off" action="https://haisanngoctrinh.com/hai-san/" method="get"><input type="search" name="s" class="apsw-search-input" value placeholder="Nhập từ khoá tìm kiếm..." data-charaters="1" data-functiontype="both"><button class="apsw-search-btn" type="submit"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="485.213px" height="485.213px" viewBox="0 0 485.213 485.213" xml:space="preserve">
+<g>
+<g>
+<path d="M471.882,407.567L360.567,296.243c-16.586,25.795-38.536,47.734-64.331,64.321l111.324,111.324
+c17.772,17.768,46.587,17.768,64.321,0C489.654,454.149,489.654,425.334,471.882,407.567z"/>
+<path d="M363.909,181.955C363.909,81.473,282.44,0,181.956,0C81.474,0,0.001,81.473,0.001,181.955s81.473,181.951,181.955,181.951
+C282.44,363.906,363.909,282.437,363.909,181.955z M181.956,318.416c-75.252,0-136.465-61.208-136.465-136.46
+c0-75.252,61.213-136.465,136.465-136.465c75.25,0,136.468,61.213,136.468,136.465
+C318.424,257.208,257.206,318.416,181.956,318.416z"/>
+<path d="M75.817,181.955h30.322c0-41.803,34.014-75.814,75.816-75.814V75.816C123.438,75.816,75.817,123.437,75.817,181.955z"/>
+</g>
+</g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/>
+</svg>
+</button><input type="hidden" name="post_type" value="product"><img class="apsw_loader" src="https://haisanngoctrinh.com/wp-content/plugins/advanced-product-search-for-woo/assets/images/loader.gif"><div class="apsw-select-box-wrap"><select class="apsw-category-items" name="category">
+<option value="0">All Categories</option><option value="cua-va-ghe" data-value="cua-va-ghe">CUA VÀ GHẸ</option><option value="hai-san-kho" data-value="hai-san-kho">HẢI SẢN KHÔ</option><option value="ngao-so-oc-hen" data-value="ngao-so-oc-hen">NGAO - SÒ - ỐC - HẾN</option><option value="tom-ca-muc" data-value="tom-ca-muc">TÔM - CÁ - MỰC</option></select></div>    	<div class="apsw_ajax_result">
+</div>    
+</form></div>				    </div>
+</div>
+<div class="shopping_cart">
+<button type="button" data-toggle="dropdown" class="btn dropdown-toggle">
+<p class="cart-contents" title="Giỏ hàng ">
+<span class="quanlity-minicart">0</span><i class="fal fa-shopping-basket"></i>
+</p>
+</button>
+<div class="woocommerce-minicart dropdown-menu">
+<div class="minicart-quickcart">Chưa có sản phẩm trong giỏ hàng</div>
+</div>
+</div>
+</div>
+<!-- Mobile Display -->
+<div class="row header-navbar-pc hidden-xs">
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+<a class="navbar-brand" href="https://haisanngoctrinh.com/">
+<img src="https://haisanngoctrinh.com/wp-content/uploads/2020/03/logo.jpg" alt>
+</a>
+<h1 class="site-description">Hải Sản Ngon Mỗi Ngày</h1>
+</div>
+<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+<div class="formsearch-header">
+<div class="apsw-search-wrap apsw_search_form_style_1"><form role="search" class="apsw-search-form both" autocomplete="off" action="https://haisanngoctrinh.com/hai-san/" method="get"><input type="search" name="s" class="apsw-search-input" value placeholder="Nhập từ khoá tìm kiếm..." data-charaters="1" data-functiontype="both"><button class="apsw-search-btn" type="submit"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="485.213px" height="485.213px" viewBox="0 0 485.213 485.213" xml:space="preserve">
+<g>
+<g>
+<path d="M471.882,407.567L360.567,296.243c-16.586,25.795-38.536,47.734-64.331,64.321l111.324,111.324
+c17.772,17.768,46.587,17.768,64.321,0C489.654,454.149,489.654,425.334,471.882,407.567z"/>
+<path d="M363.909,181.955C363.909,81.473,282.44,0,181.956,0C81.474,0,0.001,81.473,0.001,181.955s81.473,181.951,181.955,181.951
+C282.44,363.906,363.909,282.437,363.909,181.955z M181.956,318.416c-75.252,0-136.465-61.208-136.465-136.46
+c0-75.252,61.213-136.465,136.465-136.465c75.25,0,136.468,61.213,136.468,136.465
+C318.424,257.208,257.206,318.416,181.956,318.416z"/>
+<path d="M75.817,181.955h30.322c0-41.803,34.014-75.814,75.816-75.814V75.816C123.438,75.816,75.817,123.437,75.817,181.955z"/>
+</g>
+</g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/>
+</svg>
+</button><input type="hidden" name="post_type" value="product"><img class="apsw_loader" src="https://haisanngoctrinh.com/wp-content/plugins/advanced-product-search-for-woo/assets/images/loader.gif"><div class="apsw-select-box-wrap"><select class="apsw-category-items" name="category">
+<option value="0">All Categories</option><option value="cua-va-ghe" data-value="cua-va-ghe">CUA VÀ GHẸ</option><option value="hai-san-kho" data-value="hai-san-kho">HẢI SẢN KHÔ</option><option value="ngao-so-oc-hen" data-value="ngao-so-oc-hen">NGAO - SÒ - ỐC - HẾN</option><option value="tom-ca-muc" data-value="tom-ca-muc">TÔM - CÁ - MỰC</option></select></div>    	<div class="apsw_ajax_result">
+</div>    
+</form></div>					</div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="box-contact-header">
+<!-- Start Contact Info -->
+<ul class="header-contact">
+<li class="header-hotline">
+<div class="inner-contact-header">
+<i class="fad fa-phone"></i>	
+<a href="tel:0702600700">Hotline 24/7<span>0702600700</span></a>
+</div>
+</li>
+</ul>
+<div class="site-header-wishlist"> 
+<a class="header-wishlist" href="https://haisanngoctrinh.com/wishlist/"><i class="fal fa-heart"></i><span class="count">      0      </span></a>
+</div>
+<!-- /End Contact Info -->
+<div class="shopping_cart">
+<button type="button" data-toggle="dropdown" class="btn dropdown-toggle">
+<p class="cart-contents" title="Giỏ hàng ">
+<span class="quanlity-minicart">0</span><i class="fal fa-shopping-basket"></i>
+</p>
+<span class="txt-minicart">Giỏ hàng</span>
+</button>
+<div class="woocommerce-minicart dropdown-menu">
+<div class="minicart-quickcart">Chưa có sản phẩm trong giỏ hàng</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="menu_primery" class="collapse navbar-collapse">
+<div class="container">
+<div class="box-header-navigation">
+<div class="dropdown-menu-category">
+<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fal fa-bars"></i> Danh mục sản phẩm</button>
+<div class="dropdown-menu">
+<div class="menu-menu-categories-product-container"><ul id="menu_category_product" class="menu"><li id="menu-item-855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-855"><a href="https://haisanngoctrinh.com/gioi-thieu/">Giới Thiệu</a></li>
+<li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-853"><a href="https://haisanngoctrinh.com/hai-san/">Hải sản</a>
+<ul class="sub-menu">
+<li id="menu-item-772" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-772"><a href="https://haisanngoctrinh.com/cua-va-ghe/">CUA VÀ GHẸ</a></li>
+<li id="menu-item-775" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-775"><a href="https://haisanngoctrinh.com/tom-ca-muc/">TÔM &#8211; CÁ &#8211; MỰC</a></li>
+<li id="menu-item-774" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-774"><a href="https://haisanngoctrinh.com/ngao-so-oc-hen/">NGAO &#8211; SÒ &#8211; ỐC &#8211; HẾN</a></li>
+<li id="menu-item-773" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-773"><a href="https://haisanngoctrinh.com/hai-san-kho/">HẢI SẢN KHÔ</a></li>
+</ul>
+</li>
+<li id="menu-item-771" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-771"><a href="https://haisanngoctrinh.com/cac-loai-hai-san-khac/">CÁC LOẠI HẢI SẢN KHÁC</a></li>
+<li id="menu-item-854" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-854"><a href="https://haisanngoctrinh.com/phan-phoi-si-va-le/">Phân Phối Sỉ Và Lẻ</a></li>
+<li id="menu-item-857" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-857"><a href="https://haisanngoctrinh.com/tin-tuc/">Tin Tức</a></li>
+<li id="menu-item-856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-856"><a href="https://haisanngoctrinh.com/lien-he/">Liên hệ</a></li>
+</ul></div>						</div> 
+</div>
+<ul id="menu-menu-primary" class="nav navbar-nav navbar-right"><li id="menu-item-780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-780 active"><a href="https://haisanngoctrinh.com/">Trang Chủ</a></li>
+<li id="menu-item-761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-761"><a href="https://haisanngoctrinh.com/gioi-thieu/">GIỚI THIỆU</a></li>
+<li id="menu-item-781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-781 dropdown"><a href="https://haisanngoctrinh.com/hai-san/">Hải sản <i class="caret"></i></a>
+<ul class="dropdown-menu">
+<li id="menu-item-762" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-762"><a href="https://haisanngoctrinh.com/cua-va-ghe/">CUA VÀ GHẸ</a></li>
+<li id="menu-item-764" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-764"><a href="https://haisanngoctrinh.com/tom-ca-muc/">TÔM &#8211; CÁ &#8211; MỰC</a></li>
+<li id="menu-item-763" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-763"><a href="https://haisanngoctrinh.com/hai-san-kho/">HẢI SẢN KHÔ</a></li>
+<li id="menu-item-690" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-690"><a href="https://haisanngoctrinh.com/ngao-so-oc-hen/">NGAO &#8211; SÒ &#8211; ỐC &#8211; HẾN</a></li>
+<li id="menu-item-782" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-782"><a href="https://haisanngoctrinh.com/cac-loai-hai-san-khac/">CÁC LOẠI HẢI SẢN KHÁC</a></li>
+</ul>
+</li>
+<li id="menu-item-814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-814"><a href="https://haisanngoctrinh.com/phan-phoi-si-va-le/">Phân Phối Sỉ &#038; Lẻ</a></li>
+<li id="menu-item-830" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-830"><a href="https://haisanngoctrinh.com/tin-tuc/">Tin Tức</a></li>
+<li id="menu-item-797" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-797"><a href="https://haisanngoctrinh.com/lien-he/">Liên hệ</a></li>
+</ul>				</div>
+</div>
+</div>
+</nav>
+<div id="mobilenav">
+<div class="mobilenav__inner">
+<div class="toplg">
+<div class="logo-mobilenav">
+<img src="https://haisanngoctrinh.com/wp-content/uploads/2020/03/logo.jpg" alt>
+</div>
+<h3><i class="fa fa-list-ul"></i>Danh mục sản phẩm</h3>
+</div>
+<div class="menu-menu-categories-product-container"><ul id="menu-main" class="mobile-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-855"><a href="https://haisanngoctrinh.com/gioi-thieu/">Giới Thiệu</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-853"><a href="https://haisanngoctrinh.com/hai-san/">Hải sản</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-772"><a href="https://haisanngoctrinh.com/cua-va-ghe/">CUA VÀ GHẸ</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-775"><a href="https://haisanngoctrinh.com/tom-ca-muc/">TÔM &#8211; CÁ &#8211; MỰC</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-774"><a href="https://haisanngoctrinh.com/ngao-so-oc-hen/">NGAO &#8211; SÒ &#8211; ỐC &#8211; HẾN</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-773"><a href="https://haisanngoctrinh.com/hai-san-kho/">HẢI SẢN KHÔ</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-771"><a href="https://haisanngoctrinh.com/cac-loai-hai-san-khac/">CÁC LOẠI HẢI SẢN KHÁC</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-854"><a href="https://haisanngoctrinh.com/phan-phoi-si-va-le/">Phân Phối Sỉ Và Lẻ</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-857"><a href="https://haisanngoctrinh.com/tin-tuc/">Tin Tức</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-856"><a href="https://haisanngoctrinh.com/lien-he/">Liên hệ</a></li>
+</ul></div>        <a class="menu_close"><i class="fas fa-angle-left"></i></a>
+</div>
+</div>
+</header>
+<div class="clearfix"></div>
+<div id="content-wrapper" role="main">
+<section id="section-banner" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<div class="box-banner-content"> 
+<div class="box-bannerslides">  
+<div id="banner-carousel" class="owl-carousel owl-theme">
+<div class="item-banner hover-img">
+<a href="#">
+<img src="images/12-01.png" alt> 
+<div class="cover-banner">
+<div class="container">
+<div class="infor-banner">
+<div class="line-banner"></div>
+<h2 class="name-banner">1</h2>
+<p class="description-banner"></p>
+<div class="readmore-banner"><a href="#">Xem chi tiết <i class="far fa-chevron-right"></i></a></div>
+</div>
+</div>
+</div>
+</a>     
+</div>
+<div class="item-banner hover-img">
+<a href>
+<img src="images/d-01.png" alt> 
+<div class="cover-banner">
+<div class="container">
+<div class="infor-banner">
+<div class="line-banner"></div>
+<h2 class="name-banner"></h2>
+<p class="description-banner"></p>
+<div class="readmore-banner"><a href>Xem chi tiết <i class="far fa-chevron-right"></i></a></div>
+</div>
+</div>
+</div>
+</a>     
+</div>
+</div>
+</div>
+<div class="box-banner_images">
+<div class="image-ads_banner hover-img">
+<a href="#">
+<img src="images/giao-hang-nhanh.jpg" alt>
+</a>
+</div>
+<div class="image-ads_banner hover-img">
+<a href="#">
+<img src="images/han-son-tuoi-song.jpg" alt>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="clearfix"></div>
+<section id="section-categories" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<div id="categories-carousel" class="owl-carousel owl-theme">
+<div class="item-categories">
+<div class="box-item-categories hover-img">
+<a href="cua-va-ghe" title="Cua và Ghẹ">
+<img src="images/ghe-song.jpg" alt>
+<div class="infor-categories">
+<div class="inner-infor-categories">
+<h3 class="name-categories">Cua và Ghẹ</h3> 
+<p class="description-categories"></p>
+<p class="readmore-categories"><a href="cua-va-ghe" title="Cua và Ghẹ">Xem ngay <i class="fas fa-angle-double-right"></i></a></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="item-categories">
+<div class="box-item-categories hover-img">
+<a href="/ngao-so-oc-hen/" title="Ngao - Sò - Ốc -Hến">
+<img src="images/so-duong-song.jpg" alt>
+<div class="infor-categories">
+<div class="inner-infor-categories">
+<h3 class="name-categories">Ngao - Sò - Ốc -Hến</h3> 
+<p class="description-categories"></p>
+<p class="readmore-categories"><a href="/ngao-so-oc-hen/" title="Ngao - Sò - Ốc -Hến">Xem ngay <i class="fas fa-angle-double-right"></i></a></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="item-categories">
+<div class="box-item-categories hover-img">
+<a href="tom-ca-muc" title="Tôm - Cá - Mực">
+<img src="images/Hai-san-tuoi.jpg" alt>
+<div class="infor-categories">
+<div class="inner-infor-categories">
+<h3 class="name-categories">Tôm - Cá - Mực</h3> 
+<p class="description-categories"></p>
+<p class="readmore-categories"><a href="tom-ca-muc" title="Tôm - Cá - Mực">Xem ngay <i class="fas fa-angle-double-right"></i></a></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="item-categories">
+<div class="box-item-categories hover-img">
+<a href="hai-san-kho" title="Hải sản khô">
+<img src="images/cac-loai-ca-bien-e1635864695909.jpg" alt>
+<div class="infor-categories">
+<div class="inner-infor-categories">
+<h3 class="name-categories">Hải sản khô</h3> 
+<p class="description-categories"></p>
+<p class="readmore-categories"><a href="hai-san-kho" title="Hải sản khô">Xem ngay <i class="fas fa-angle-double-right"></i></a></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="item-categories">
+<div class="box-item-categories hover-img">
+<a href="cac-loai-hai-san-khac" title="Các loại hải sản khác">
+<img src="images/cua-hang-hai-san-tuoi-song-e1635864810701.jpg" alt>
+<div class="infor-categories">
+<div class="inner-infor-categories">
+<h3 class="name-categories">Các loại hải sản khác</h3> 
+<p class="description-categories"></p>
+<p class="readmore-categories"><a href="cac-loai-hai-san-khac" title="Các loại hải sản khác">Xem ngay <i class="fas fa-angle-double-right"></i></a></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="clearfix"></div><section id="section-featured" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<div class="content-featured">
+<div class="items-featured">
+<div class="icon-featured">
+<img src="images/guarantee.png" alt> 
+</div>
+<div class="infor-featured">
+<h3 class="name-featured">Hải sản tươi sống</h3>
+<p class="text-featured">Cam kết chất lượng</p>
+</div>
+</div>
+<div class="items-featured">
+<div class="icon-featured">
+<img src="images/repeat.png" alt> 
+</div>
+<div class="infor-featured">
+<h3 class="name-featured">Đổi trả hàng, hoàn tiền</h3>
+<p class="text-featured">Nếu hải sản không đúng chất lượng</p>
+</div>
+</div>
+<div class="items-featured">
+<div class="icon-featured">
+<img src="images/new-product2.png" alt> 
+</div>
+<div class="infor-featured">
+<h3 class="name-featured">Đóng gói gọn gàng</h3>
+<p class="text-featured">Sạch và tiện lợi</p>
+</div>
+</div>
+<div class="items-featured">
+<div class="icon-featured">
+<img src="images/icon_free.png" alt> 
+</div>
+<div class="infor-featured">
+<h3 class="name-featured">Miễn phí giao hàng</h3>
+<p class="text-featured">Cho hóa đơn từ 500,000đ</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="clearfix"></div><section id="section-product_1" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<div class="heading-section">
+<h2 class="title-section"><span><i class="fal fa-star"></i>Tôm cá mực</span></h2>
+<div class="seeall-section"><a href="#">Xem tất cả <i class="far fa-chevron-right"></i></a></div>
+</div>  
+<div class="row content-products">
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 hidden-xs">
+<div class="box-cateproduct">
+<img src="images/mot-so-mon-an-duoc-che-bien-tu-muc-trung.jpg" alt>
+<div class="infor-cateproduct">
+<div class="inner-cateproduct">
+<div class="information-cateproduct">
+<h4>Giao Hàng Miễn Phí </h4>
+<h2>Cho Đơn hàng Từ </h2>
+<p>500.000 Trở Lên</p>
+<p>&nbsp;</p>                      </div>
+<p class="readmore-cateproduct"><a href="#" title="Top Rated">Chi tiết <i class="fas fa-angle-double-right"></i></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+<div id="product_1-carousel" class="owl-carousel owl-theme">
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/muc-mot-nang/"> 
+<img width="300" height="300" src="images/muc-mot-nang-1-300x300.jpg" class="attachment-medium size-medium wp-post-image" alt="Mực Một Nắng" loading="lazy" title="Mực Một Nắng" srcset="https://haisanngoctrinh.com/wp-content/uploads/2020/04/muc-mot-nang-1-300x300.jpg 300w, images/muc-mot-nang-1-500x500.jpg 500w, images/muc-mot-nang-1-e1639064448817.jpg 600w, images/muc-mot-nang-1-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-197  wishlist-fragment on-first-load" data-fragment-ref="197" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:197,&quot;parent_product_id&quot;:197,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/muc-mot-nang/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/muc-mot-nang/" title>Mực Một Nắng</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/muc-mot-nang/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="197" data-product_sku aria-label="Đọc thêm về &ldquo;Mực Một Nắng&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/muc-trung/"> 
+<img width="257" height="300" src="images/muc-trung-257x300.jpg" class="attachment-medium size-medium wp-post-image" alt="Mực trứng" loading="lazy" title="Mực trứng" srcset="https://haisanngoctrinh.com/wp-content/uploads/2020/09/muc-trung-257x300.jpg 257w, images/muc-trung-428x500.jpg 428w, images/muc-trung.jpg 525w" sizes="(max-width: 257px) 100vw, 257px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-911  wishlist-fragment on-first-load" data-fragment-ref="911" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:911,&quot;parent_product_id&quot;:911,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/muc-trung/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/muc-trung/" title>Mực trứng</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/muc-trung/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="911" data-product_sku aria-label="Đọc thêm về &ldquo;Mực trứng&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/muc-ong/"> 
+<img width="400" height="225" src="images/muc-ong-tuoi.-400x225.jpg" class="attachment-medium size-medium wp-post-image" alt="Mực ống" loading="lazy" title="Mực ống" srcset="https://haisanngoctrinh.com/wp-content/uploads/2020/10/muc-ong-tuoi.-400x225.jpg 400w, images/muc-ong-tuoi.-600x338.jpg 600w, images/muc-ong-tuoi..jpg 700w" sizes="(max-width: 400px) 100vw, 400px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-910  wishlist-fragment on-first-load" data-fragment-ref="910" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:910,&quot;parent_product_id&quot;:910,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/muc-ong/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/muc-ong/" title>Mực ống</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/muc-ong/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="910" data-product_sku aria-label="Đọc thêm về &ldquo;Mực ống&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</section>
+<div class="clearfix"></div><section id="section-product_2" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<div class="heading-section">
+<h2 class="title-section"><span><i class="fal fa-star"></i>NGAO - SÒ - ỐC - HẾN</span></h2>
+<div class="seeall-section"><a href="#">Xem tất cả <i class="far fa-chevron-right"></i></a></div>
+</div> 
+<div class="row content-products">
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 hidden-xs">
+<div class="box-cateproduct">
+<img src="https://haisanngoctrinh.com/wp-content/uploads/2020/04/so-duong-song.jpg" alt>
+<div class="infor-cateproduct">
+<div class="inner-cateproduct">
+<div class="information-cateproduct">
+<h4>Giao Hàng Miễn Phí </h4>
+<h2>Cho Đơn hàng Từ </h2>
+<p>500.000 Trở Lên</p>
+<p>&nbsp;</p>                      </div>
+<p class="readmore-cateproduct"><a href="#" title="Top Rated">Chi tiết <i class="fas fa-angle-double-right"></i></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+<div id="product_2-carousel" class="owl-carousel owl-theme">
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/so-mai/"> 
+<img width="400" height="266" src="images/so-mai-400x266.jpg" class="attachment-medium size-medium wp-post-image" alt="Sò Mai" loading="lazy" title="Sò Mai" srcset="https://haisanngoctrinh.com/wp-content/uploads/2021/11/so-mai-400x266.jpg 400w, images/so-mai-751x500.jpg 751w, images/so-mai-768x511.jpg 768w, images/so-mai-e1637672907792.jpg 600w" sizes="(max-width: 400px) 100vw, 400px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-949  wishlist-fragment on-first-load" data-fragment-ref="949" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:949,&quot;parent_product_id&quot;:949,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/so-mai/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/so-mai/" title>Sò Mai</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/so-mai/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="949" data-product_sku aria-label="Đọc thêm về &ldquo;Sò Mai&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/so-lua/"> 
+<img width="400" height="267" src="images/so-lua-400x267.jpg" class="attachment-medium size-medium wp-post-image" alt="Sò Lụa" loading="lazy" title="Sò Lụa" srcset="https://haisanngoctrinh.com/wp-content/uploads/2021/11/so-lua-400x267.jpg 400w, images/so-lua.jpg 600w" sizes="(max-width: 400px) 100vw, 400px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-934  wishlist-fragment on-first-load" data-fragment-ref="934" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:934,&quot;parent_product_id&quot;:934,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/so-lua/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/so-lua/" title>Sò Lụa</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/so-lua/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="934" data-product_sku aria-label="Đọc thêm về &ldquo;Sò Lụa&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/ngao-hoa/"> 
+<img width="267" height="300" src="images/ngao-hoa-tuoi-song-267x300.jpg" class="attachment-medium size-medium wp-post-image" alt="Ngao Hoa" loading="lazy" title="Ngao Hoa" srcset="https://haisanngoctrinh.com/wp-content/uploads/2021/11/ngao-hoa-tuoi-song-267x300.jpg 267w, images/ngao-hoa-tuoi-song.jpg 340w" sizes="(max-width: 267px) 100vw, 267px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-904  wishlist-fragment on-first-load" data-fragment-ref="904" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:904,&quot;parent_product_id&quot;:904,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/ngao-hoa/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/ngao-hoa/" title>Ngao Hoa</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/ngao-hoa/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="904" data-product_sku aria-label="Đọc thêm về &ldquo;Ngao Hoa&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/ngao-chot/"> 
+<img width="303" height="300" src="images/ngao-chot-303x300.jpg" class="attachment-medium size-medium wp-post-image" alt="Ngao Chọt" loading="lazy" title="Ngao Chọt" srcset="https://haisanngoctrinh.com/wp-content/uploads/2021/11/ngao-chot-303x300.jpg 303w, images/ngao-chot-100x100.jpg 100w, images/ngao-chot-505x500.jpg 505w, images/ngao-chot.jpg 600w" sizes="(max-width: 303px) 100vw, 303px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-896  wishlist-fragment on-first-load" data-fragment-ref="896" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:896,&quot;parent_product_id&quot;:896,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/ngao-chot/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/ngao-chot/" title>Ngao Chọt</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/ngao-chot/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="896" data-product_sku aria-label="Đọc thêm về &ldquo;Ngao Chọt&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/oc-toi/"> 
+<img width="400" height="280" src="images/oc-to-song-400x280.jpg" class="attachment-medium size-medium wp-post-image" alt="Ốc tỏi" loading="lazy" title="Ốc tỏi" srcset="https://haisanngoctrinh.com/wp-content/uploads/2020/04/oc-to-song-400x280.jpg 400w, images/oc-to-song-600x420.jpg 600w, images/oc-to-song-714x500.jpg 714w, images/oc-to-song.jpg 720w" sizes="(max-width: 400px) 100vw, 400px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-163  wishlist-fragment on-first-load" data-fragment-ref="163" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:163,&quot;parent_product_id&quot;:163,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/oc-toi/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/oc-toi/" title>Ốc tỏi</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/oc-toi/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="163" data-product_sku aria-label="Đọc thêm về &ldquo;Ốc tỏi&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/oc-huong/"> 
+<img width="400" height="300" src="images/oc-huong-bien-400x300.jpg" class="attachment-medium size-medium wp-post-image" alt="Ốc hương" loading="lazy" title="Ốc hương" srcset="https://haisanngoctrinh.com/wp-content/uploads/2020/04/oc-huong-bien-400x300.jpg 400w, images/oc-huong-bien-667x500.jpg 667w, images/oc-huong-bien-768x576.jpg 768w, https://haisanngoctrinh.com/wp-content/uploads/2020/04/oc-huong-bien-e1637651181770.jpg 600w" sizes="(max-width: 400px) 100vw, 400px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-125  wishlist-fragment on-first-load" data-fragment-ref="125" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:125,&quot;parent_product_id&quot;:125,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/oc-huong/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/oc-huong/" title>Ốc hương</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="?add-to-cart=125" title="Add to cart" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn-addtocart" data-product_id="125" data-product_sku aria-label="Thêm &ldquo;Ốc hương&rdquo; vào giỏ hàng" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/ngao-2-coi/"> 
+<img width="395" height="300" src="images/ngao-2-coi-1-395x300.jpg" class="attachment-medium size-medium wp-post-image" alt="Ngao 2 cồi" loading="lazy" title="Ngao 2 cồi" srcset="https://haisanngoctrinh.com/wp-content/uploads/2020/04/ngao-2-coi-1-395x300.jpg 395w, images/ngao-2-coi-1-658x500.jpg 658w, images/ngao-2-coi-1-768x584.jpg 768w, images/ngao-2-coi-1-e1638157721890.jpg 600w" sizes="(max-width: 395px) 100vw, 395px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-87  wishlist-fragment on-first-load" data-fragment-ref="87" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:87,&quot;parent_product_id&quot;:87,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/ngao-2-coi/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/ngao-2-coi/" title>Ngao 2 cồi</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/ngao-2-coi/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="87" data-product_sku aria-label="Đọc thêm về &ldquo;Ngao 2 cồi&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/ngao-2-coi-song/"> 
+<img width="400" height="282" src="images/Ngao-2-coi-400x282.jpg" class="attachment-medium size-medium wp-post-image" alt="Ngao 2 cồi sống" loading="lazy" title="Ngao 2 cồi sống" srcset="https://haisanngoctrinh.com/wp-content/uploads/2020/04/Ngao-2-coi-400x282.jpg 400w, images/Ngao-2-coi-600x424.jpg 600w, images/Ngao-2-coi-708x500.jpg 708w, images/Ngao-2-coi-768x542.jpg 768w, images/Ngao-2-coi.jpg 850w" sizes="(max-width: 400px) 100vw, 400px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-85  wishlist-fragment on-first-load" data-fragment-ref="85" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:85,&quot;parent_product_id&quot;:85,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/ngao-2-coi-song/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/ngao-2-coi-song/" title>Ngao 2 cồi sống</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/ngao-2-coi-song/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="85" data-product_sku aria-label="Đọc thêm về &ldquo;Ngao 2 cồi sống&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</section>
+<div class="clearfix"></div><section id="section-register" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 ">
+<div class="box-infor-register">
+<img src="images/oc-huong-bien-e1637651181770.jpg" alt>
+<div class="infor-register">
+<div class="inner-infor-register">
+<h2 class="name-register">ĐĂNG KÝ NHẬN BÁO GIÁ</h2> 
+<p class="description-register">Nếu có thắc mắc và giá cả vui lòng để lại thông tin chúng tôi sẽ liên hệ với bạn sớm nhất</p> 
+<p class="readmore-section"><a href="#" data-toggle="modal" data-target="#registerForm">Đăng ký ngay</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 form-registeremail">
+<div class="box-infor-register">
+<img src="https://haisanngoctrinh.com/wp-content/uploads/2021/11/han-son-tuoi-song.jpg" alt>
+<div class="infor-register">
+<div class="inner-infor-register">
+<p class="icon-email"><i class="fal fa-envelope-open-text"></i></p>
+<h3 class="name-register">Đặt hàng</h3>
+<p class="text-register">Để lại SĐT chúng tôi sẽ liên hệ lại ngay</p> 
+<div role="form" class="wpcf7" id="wpcf7-f770-o1" lang="vi" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f770-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="770">
+<input type="hidden" name="_wpcf7_version" value="5.5.2">
+<input type="hidden" name="_wpcf7_locale" value="vi">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f770-o1">
+<input type="hidden" name="_wpcf7_container_post" value="0">
+<input type="hidden" name="_wpcf7_posted_data_hash" value>
+</div>
+<div class="form-group">
+<div class="row-form_register">
+<span class="wpcf7-form-control-wrap your-number"><input type="text" name="your-number" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Nhập SĐT của bạn"></span><button class="wpcf7-form-control wpcf7-submit" type="submit" value="Gửi đi"><i class="fal fa-phone"></i></button>
+</div>
+</div>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div>                      </div>
+</div>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</section>
+<div class="clearfix"></div><section id="section-product_3" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<div class="heading-section">
+<h2 class="title-section"><span><i class="fal fa-star"></i>CUA và GHẸ</span></h2>
+<div class="seeall-section"><a href="#">Xem tất cả <i class="far fa-chevron-right"></i></a></div>
+</div> 
+<div class="row content-products">
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 hidden-xs">
+<div class="box-cateproduct">
+<img src="https://haisanngoctrinh.com/wp-content/uploads/2020/04/ghe-song.jpg" alt>
+<div class="infor-cateproduct">
+<div class="inner-cateproduct">
+<div class="information-cateproduct">
+<h4>Giao Hàng Miễn Phí </h4>
+<h2>Cho Đơn hàng Từ </h2>
+<p>500.000 Trở Lên</p>
+<p>&nbsp;</p>                      </div>
+<p class="readmore-cateproduct"><a href="#" title="Top Rated">Chi tiết <i class="fas fa-angle-double-right"></i></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+<div id="product_3-carousel" class="owl-carousel owl-theme">
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/ghe%cc%a3-song-loa%cc%a3i-1/"> 
+<img width="400" height="280" src="images/ghe-song-400x280.jpg" class="attachment-medium size-medium wp-post-image" alt="Ghẹ sống loại 1 &#8211; Hải Sản Ngọc Trinh" loading="lazy" title="Ghẹ sống loại 1 &#8211; Hải Sản Ngọc Trinh" srcset="https://haisanngoctrinh.com/wp-content/uploads/2020/04/ghe-song-400x280.jpg 400w, https://haisanngoctrinh.com/wp-content/uploads/2020/04/ghe-song.jpg 452w" sizes="(max-width: 400px) 100vw, 400px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-171  wishlist-fragment on-first-load" data-fragment-ref="171" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:171,&quot;parent_product_id&quot;:171,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/ghe%cc%a3-song-loa%cc%a3i-1/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/ghe%cc%a3-song-loa%cc%a3i-1/" title>Ghẹ sống loại 1 &#8211; Hải Sản Ngọc Trinh</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/ghe%cc%a3-song-loa%cc%a3i-1/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="171" data-product_sku aria-label="Đọc thêm về &ldquo;Ghẹ sống loại 1 - Hải Sản Ngọc Trinh&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</section>
+<div class="clearfix"></div><section id="section-product_4" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<div class="heading-section">
+<h2 class="title-section"><span><i class="fal fa-star"></i>HẢI SẢN KHÔ</span></h2>
+<div class="seeall-section"><a href="#">Xem tất cả <i class="far fa-chevron-right"></i></a></div>
+</div> 
+<div class="row content-products">
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 hidden-xs">
+<div class="box-cateproduct">
+<img src="images/3-nha-hang-hai-san-gia-duoi-1-trieu-dong-tai-TP-HCM-3.jpg" alt>
+<div class="infor-cateproduct">
+<div class="inner-cateproduct">
+<div class="information-cateproduct">
+<h4>Tặng Voucher Giảm</h4>
+<h2>10% Hóa Đơn</h2>
+<p>Cho khách hàng thân thiết</p>
+<p>&nbsp;</p>                      </div>
+<p class="readmore-cateproduct"><a href="#" title="Top Rated">Chi tiết <i class="fas fa-angle-double-right"></i></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+<div id="product_4-carousel" class="owl-carousel owl-theme">
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/kho-ca-com/"> 
+<img width="300" height="300" src="images/kho-ca-com-300x300.jpg" class="attachment-medium size-medium wp-post-image" alt="Khô cá cơm" loading="lazy" title="Khô cá cơm" srcset="https://haisanngoctrinh.com/wp-content/uploads/2022/01/kho-ca-com-300x300.jpg 300w, images/kho-ca-com-500x500.jpg 500w, images/kho-ca-com-e1641394944353.jpg 600w, images/kho-ca-com-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-1014  wishlist-fragment on-first-load" data-fragment-ref="1014" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:1014,&quot;parent_product_id&quot;:1014,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/kho-ca-com/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/kho-ca-com/" title>Khô cá cơm</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/kho-ca-com/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="1014" data-product_sku aria-label="Đọc thêm về &ldquo;Khô cá cơm&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/ca-du-mot-nang/"> 
+<img width="400" height="300" src="images/ca-du-400x300.jpg" class="attachment-medium size-medium wp-post-image" alt="Cá đù một nắng" loading="lazy" title="Cá đù một nắng" srcset="https://haisanngoctrinh.com/wp-content/uploads/2022/01/ca-du-400x300.jpg 400w, images/ca-du.jpg 600w" sizes="(max-width: 400px) 100vw, 400px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-1010  wishlist-fragment on-first-load" data-fragment-ref="1010" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:1010,&quot;parent_product_id&quot;:1010,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/ca-du-mot-nang/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/ca-du-mot-nang/" title>Cá đù một nắng</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/ca-du-mot-nang/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="1010" data-product_sku aria-label="Đọc thêm về &ldquo;Cá đù một nắng&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+<div class="items-product">
+<div class="box-product">
+<div class="img-product">
+<a href="https://haisanngoctrinh.com/san-pham/kho-muc/"> 
+<img width="400" height="263" src="images/kho-muc-loai-lon-400x263.jpg" class="attachment-medium size-medium wp-post-image" alt="khô mực" loading="lazy" title="khô mực" srcset="https://haisanngoctrinh.com/wp-content/uploads/2021/12/kho-muc-loai-lon-400x263.jpg 400w, images/kho-muc-loai-lon-761x500.jpg 761w, images/kho-muc-loai-lon-768x504.jpg 768w, images/kho-muc-loai-lon-e1640249546937.jpg 600w" sizes="(max-width: 400px) 100vw, 400px">                      </a>
+<div class="details-product">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-991  wishlist-fragment on-first-load" data-fragment-ref="991" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:991,&quot;parent_product_id&quot;:991,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;\u0110\u1ebfn \u01b0u th\u00edch&quot;,&quot;already_in_wishslist_text&quot;:&quot;S\u1ea3n ph\u1ea9m \u0111\u00e3 c\u00f3 trong danh s\u00e1ch c\u1ee7a b\u1ea1n!&quot;,&quot;product_added_text&quot;:&quot;\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
+</div>
+<a href="https://haisanngoctrinh.com/san-pham/kho-muc/"><i class="fal fa-eye"></i></a>
+</div>
+</div>
+<div class="info-product">
+<a class="name-product" href="https://haisanngoctrinh.com/san-pham/kho-muc/" title>khô mực</a>
+<p class="price-product">Giá: <span><span class="amount">Liên hệ</span></span></p>
+<p class="stars-product">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fal fa-star"></i>
+</p>
+<div class="shopingcart-product"> 
+<a href="https://haisanngoctrinh.com/san-pham/kho-muc/" title="Add to cart" data-quantity="1" class="button product_type_simple ajax_add_to_cart btn-addtocart" data-product_id="991" data-product_sku aria-label="Đọc thêm về &ldquo;khô mực&rdquo;" rel="nofollow">Thêm vào giỏ <i class="fal fa-shopping-bag"></i></a>                      </div>
+</div>
+</div>                               
+</div>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</section>
+<div class="clearfix"></div><section id="section-blog" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<div class="heading-section">
+<h2 class="title-section"><span><i class="fal fa-newspaper"></i> Tin tức</span></h2>
+<div class="seeall-section"><a href="/tin-tuc/">Xem tất cả <i class="far fa-chevron-right"></i></a></div>
+</div>
+<div id="blog-carousel" class="owl-carousel owl-theme">
+<div class="items-blog">
+<div class="box-blog">
+<div class="img-blog">
+<a href="https://haisanngoctrinh.com/muc-la/"> 
+<img src="images/muc-la-tuoi-400x240.jpg" alt>
+</a>
+<div class="ovrly"></div>
+<p class="details-blog"><a href="https://haisanngoctrinh.com/muc-la/">Xem chi tiết</a></p>
+</div>
+<div class="info-blog">
+<a class="name-blog" href="https://haisanngoctrinh.com/muc-la/">Địa chỉ mua mực lá giá rẻ Tại tphcm</a>
+<p class="time-blog">
+<span><i class="fal fa-calendar"></i>Th10 04, 2020</span>/
+<span><i class="fal fa-user"></i><a href="https://haisanngoctrinh.com/author/admin/" title="Đăng bởi admin" rel="author">admin</a></span>/
+<span class="post-comment"><i class="fal fa-comments-alt"></i> 0</span>
+</p>
+<p class="excerpt-blog">Mực Lá bề ngoài có hình dạng tương đối giống mực nang, nhưng kích thước nhỏ và có phần thân thon, nhọn hơn mực nang. Ở Việt Nam mực ...</p>
+</div>
+</div>
+</div>
+<div class="items-blog">
+<div class="box-blog">
+<div class="img-blog">
+<a href="https://haisanngoctrinh.com/ghe-xanh-ghe-song-phan-thiet-phu-quoc/"> 
+<img src="images/GHe-song-e1607556516256-400x270.jpg" alt>
+</a>
+<div class="ovrly"></div>
+<p class="details-blog"><a href="https://haisanngoctrinh.com/ghe-xanh-ghe-song-phan-thiet-phu-quoc/">Xem chi tiết</a></p>
+</div>
+<div class="info-blog">
+<a class="name-blog" href="https://haisanngoctrinh.com/ghe-xanh-ghe-song-phan-thiet-phu-quoc/">Ghẹ Xanh Ghẹ Sống Phan Thiết &#8211; Phú Quốc</a>
+<p class="time-blog">
+<span><i class="fal fa-calendar"></i>Th9 24, 2020</span>/
+<span><i class="fal fa-user"></i><a href="https://haisanngoctrinh.com/author/admin/" title="Đăng bởi admin" rel="author">admin</a></span>/
+<span class="post-comment"><i class="fal fa-comments-alt"></i> 0</span>
+</p>
+<p class="excerpt-blog">Ghẹ sống loại 1: &#8211;  (2-4con) Ghẹ xanh giao sống tận nơi. Giá và size có thể thay đổi theo mẹ thiên nhiên. Shop sẽ báo khi đặt ...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-partner" class="fadeIn wow" data-wow-delay="0.2s">
+<div class="background-overlay">
+<div class="container">
+<h2 class="title-section"><span><i class="fal fa-star"></i>Đối tác khách hàng</span></h2>
+<div id="partner-carousel" class="owl-carousel owl-theme">
+<div class="item-partner"> 
+<a class="link-partner" href="#" target="_blank">         
+<img src="images/logo-1.jpg" alt>  
+</a>     
+</div>
+<div class="item-partner"> 
+<a class="link-partner" href="#" target="_blank">         
+<img src="images/logo-2.jpg" alt>  
+</a>     
+</div>
+<div class="item-partner"> 
+<a class="link-partner" href="#" target="_blank">         
+<img src="images/logo-3.jpg" alt>  
+</a>     
+</div>
+<div class="item-partner"> 
+<a class="link-partner" href="#" target="_blank">         
+<img src="images/logo-5.jpg" alt>  
+</a>     
+</div>
+<div class="item-partner"> 
+<a class="link-partner" href="#" target="_blank">         
+<img src="https://haisanngoctrinh.com/wp-content/uploads/2021/11/logo-5.jpg" alt>  
+</a>     
+</div>
+<div class="item-partner"> 
+<a class="link-partner" href="#" target="_blank">         
+<img src="images/logo-6.jpg" alt>  
+</a>     
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="clearfix"></div>
+</div>
+<!--======================================
+Footer Section
+========================================-->
+<footer id="footer-wrapper" class="footer-sidebar" role="contentinfo"> 
+<div class="background-overlay footer-top-infor">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<!-- Start Contact Info -->
+<ul class="footer-contact">
+<li class="footer-hotline">
+<div class="inner-contact-footer">
+<i class="fal fa-headphones-alt"></i>	
+<a href="tel:0394 297 192">Hotline 24/7<span>0394 297 192</span></a>
+</div>
+</li>
+<li class="footer-email">
+<div class="inner-contact-footer">
+<i class="fal fa-envelope-open-text"></i>	
+<p class="text-footer-email">Email<span>haisantuoisongsivale@gmail.vn</span></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+<p class="text-register-email">Mạng xã hội</p>
+<ul class="social">
+<li><a href="https://www.facebook.com/H%E1%BA%A3i-S%E1%BA%A3n-T%C6%B0%C6%A1i-S%E1%BB%91ng-Ng%E1%BB%8Dc-Trinh-Tuy-Phong-B%C3%ACnh-Thu%E1%BA%ADn-104615028421642/"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+<div class="register-email">
+<p class="text-register-email">Đăng ký nhận tin</p>
+<div class="form-register-email">
+<div role="form" class="wpcf7" id="wpcf7-f768-o2" lang="vi" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f768-o2" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="768">
+<input type="hidden" name="_wpcf7_version" value="5.5.2">
+<input type="hidden" name="_wpcf7_locale" value="vi">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f768-o2">
+<input type="hidden" name="_wpcf7_container_post" value="0">
+<input type="hidden" name="_wpcf7_posted_data_hash" value>
+</div>
+<div class="form-group">
+<div class="row-form_register">
+<span class="wpcf7-form-control-wrap your-email"><input type="text" name="your-email" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Nhập Email của bạn"></span><button class="wpcf7-form-control wpcf7-submit" type="submit" value="Gửi đi"><i class="fal fa-paper-plane"></i></button>
+</div>
+</div>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+<div class="background-overlay">
+<div class="container">
+<div class="row content-footer-widget">
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 colums-widget-footer">
+<!-- <div class="logo-footer"><img src="" alt=""></div> -->
+<aside id="custom_html-3" class="widget_text widget"><h3 class="widget-title">Hải sản ngọc trinh</h3><div class="textwidget custom-html-widget"><div class="info_contact">
+<p><i class="fa fa-home"></i>Địa chỉ: 43/1 Đường 21, Phường 8, Quận Gò Vấp, Thành Phố Hồ Chí Minh</p>
+<p><i class="fa fa-phone-alt"></i>Điện thoại: 0394 297 192 - 0911 169 792</p>
+<p><i class="fa fa-envelope"></i>Email: haisantuoisongsivale@gmail.com</p>
+<p><i class="fa fa-globe"></i>Website: www.haisanngoctrinh.com</p>
+</div></div></aside>				</div>
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 colums-widget-footer">
+<aside id="nav_menu-2" class="widget"><h3 class="widget-title">Chính sách</h3><div class="menu-menu-chinh-sach-container"><ul id="menu-menu-chinh-sach" class="menu"><li id="menu-item-799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-799"><a href="https://haisanngoctrinh.com/phuong-thuc-thanh-toan/">Phương thức thanh toán</a></li>
+<li id="menu-item-800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-800"><a href="https://haisanngoctrinh.com/chinh-sach-giao-hang/">Chính sách giao hàng</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801"><a href="https://haisanngoctrinh.com/chinh-sach-doi-tra-hang/">Chính sách đổi trả hàng</a></li>
+<li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="https://haisanngoctrinh.com/uu-dai-khach-hang-than-thiet/">Ưu đãi khách hàng thân thiết</a></li>
+<li id="menu-item-816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-816"><a href="https://haisanngoctrinh.com/lien-he/">Liên hệ</a></li>
+</ul></div></aside>	 
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 colums-widget-footer">
+<aside id="custom_html-4" class="widget_text widget"><h3 class="widget-title">Bản đồ</h3><div class="textwidget custom-html-widget"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d250790.3739060824!2d106.650345!3d10.841923000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdb028179ed828050!2zTsahaSBiw6FuIGdo4bq5IHhhbmggZ8OyIHbhuqVwIC0gaOG6o2kgc-G6o24gbmfhu41jIHRyaW5o!5e0!3m2!1svi!2sus!4v1636562836145!5m2!1svi!2sus" width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe></div></aside>				</div>
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 colums-widget-footer">
+<aside id="custom_html-2" class="widget_text widget"><h3 class="widget-title">Fanpage</h3><div class="textwidget custom-html-widget"><div class="fb-page" data-href="https://www.facebook.com/H%E1%BA%A3i-S%E1%BA%A3n-T%C6%B0%C6%A1i-S%E1%BB%91ng-Ng%E1%BB%8Dc-Trinh-Tuy-Phong-B%C3%ACnh-Thu%E1%BA%ADn-104615028421642/" data-tabs="timeline" data-width data-height="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/H%E1%BA%A3i-S%E1%BA%A3n-T%C6%B0%C6%A1i-S%E1%BB%91ng-Ng%E1%BB%8Dc-Trinh-Tuy-Phong-B%C3%ACnh-Thu%E1%BA%ADn-104615028421642/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/H%E1%BA%A3i-S%E1%BA%A3n-T%C6%B0%C6%A1i-S%E1%BB%91ng-Ng%E1%BB%8Dc-Trinh-Tuy-Phong-B%C3%ACnh-Thu%E1%BA%ADn-104615028421642/">Hải Sản Tươi Sống Ngọc Trinh-Tuy Phong-Bình Thuận</a></blockquote></div></div></aside>				</div>
+</div>
+</div>
+</div>
+<p class="text-copyright">Copyright © 2021. Hải Sản Ngọc Trinh</p>
+</footer>
+<!--======================================
+Top Scroller
+========================================-->
+<!-- <a href="#" class="top-scroll"><i class="fa fa-hand-point-up"></i></a>  -->
+<div class="social-ring">
+<div class="social-ring-main">
+<div class="social-ring-content">
+<a href="tel:0911169792" class="call-icon" rel="nofollow" target="_blank">
+<i class="fa fa-phone-alt" aria-hidden="true"></i>
+<div class="animated alo-circle"></div>
+<div class="animated alo-circle-fill"></div>
+<span>0911169792</span>
+</a>
+</div>
+</div>
+</div>
+<ul class="social-in-viewport">
+<li>
+<a href="tel:0911169792" rel="nofollow" target="_blank">
+<i class="fa fa-phone-alt" aria-hidden="true"></i>
+<span>Gọi điện</span>
+</a>
+</li>
+<li>
+<a href="https://www.google.com/maps?ll=10.841923,106.650345&amp;z=11&amp;t=m&amp;hl=vi&amp;gl=US&amp;mapclient=embed&amp;cid=15781318404935417936" rel="nofollow" target="_blank">
+<img src="images/wpfast-icon-map.png" alt>
+<span>Tìm đường</span>
+</a>
+</li>
+<li>
+<a href="https://zalo.me/0911169792" rel="nofollow" target="_blank">
+<img src="images/wpfast-icon-zalo.png" alt>
+<span>Chat zalo</span>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/messages/t/109050270729378" rel="nofollow" target="_blank">
+<img src="images/wpfast-icon-messenger.png" alt>
+<span>Messenger</span>
+</a>
+</li>
+</ul>
+<div class="modal fade" id="registerForm">
+<div class="modal-dialog">
+<div class="modal-content">
+<!-- Modal Header -->
+<div class="modal-header">
+<h4 class="modal-title">Vui lòng điền đầy đủ thông tin vào mẫu bên dưới!</h4>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+<!-- Modal body -->
+<div class="modal-body">
+<div role="form" class="wpcf7" id="wpcf7-f769-o3" lang="vi" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f769-o3" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="769">
+<input type="hidden" name="_wpcf7_version" value="5.5.2">
+<input type="hidden" name="_wpcf7_locale" value="vi">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f769-o3">
+<input type="hidden" name="_wpcf7_container_post" value="0">
+<input type="hidden" name="_wpcf7_posted_data_hash" value>
+</div>
+<div class="form-group">
+<span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Họ tên"></span><span class="wpcf7-form-control-wrap your-phone"><input type="tel" name="your-phone" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="Điện thoại"></span><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Ghi chú.."></textarea></span><input type="submit" value="Gửi thông tin" class="wpcf7-form-control has-spinner wpcf7-submit">
+</div>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div> 
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="SuccessfulForm">
+<div class="modal-dialog">
+<div class="modal-content">
+<!-- Modal body -->
+<div class="modal-body">
+<div class="icon-check"><i class="fa fa-check-circle"></i></div>
+<h4 class="title-successful">Đăng ký thành công</h4>
+<p class="des-successful">Cảm ơn bạn đã quan tâm và đăng ký cho chúng tôi.<br> Chúng tôi sẽ liên hệ với bạn trong vòng 24h. Nếu bạn có bất cứ thắc mắc hay câu hỏi nào vui lòng gọi điện để được tư vấn: <a href="tel:0911169792">0911169792</a></p>
+<div class="back-homepage"><a href="https://haisanngoctrinh.com/"><span>Trở về trang chủ</span></a></div>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+</div>
+</div>
+</div>
+<!-- <div class="box-note_product">
+<h3 class="tit-note_product">Trang Chủ</h3>
+<div class="infor-note_product">
+<ul class="details-note_product">
+<li>Mã SP</li>
+<li>Bảo hành: </li>
+<li>Tình trạng: <span class="status-"></span></li>
+</ul>
+</div>
+</div> -->
+<div class="popup-register"><a href="#" data-toggle="modal" data-target="#registerForm"><img src="images/btn-popup.png" alt></a></div>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-async="1" data-defer="1" data-src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v3.2"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked">
+jQuery( function( $ ) {
+if ( ! String.prototype.getDecimals ) {
+String.prototype.getDecimals = function() {
+var num = this,
+match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+if ( ! match ) {
+return 0;
+}
+return Math.max( 0, ( match[1] ? match[1].length : 0 ) - ( match[2] ? +match[2] : 0 ) );
+}
+}
+// Quantity "plus" and "minus" buttons
+$( document.body ).on( 'click', '.plus, .minus', function() {
+var $qty        = $( this ).closest( '.quantity' ).find( '.qty'),
+currentVal  = parseFloat( $qty.val() ),
+max         = parseFloat( $qty.attr( 'max' ) ),
+min         = parseFloat( $qty.attr( 'min' ) ),
+step        = $qty.attr( 'step' );
+// Format values
+if ( ! currentVal || currentVal === '' || currentVal === 'NaN' ) currentVal = 0;
+if ( max === '' || max === 'NaN' ) max = '';
+if ( min === '' || min === 'NaN' ) min = 0;
+if ( step === 'any' || step === '' || step === undefined || parseFloat( step ) === 'NaN' ) step = 1;
+// Change the value
+if ( $( this ).is( '.plus' ) ) {
+if ( max && ( currentVal >= max ) ) {
+$qty.val( max );
+} else {
+$qty.val( ( currentVal + parseFloat( step )).toFixed( step.getDecimals() ) );
+}
+} else {
+if ( min && ( currentVal <= min ) ) {
+$qty.val( min );
+} else if ( currentVal > 0 ) {
+$qty.val( ( currentVal - parseFloat( step )).toFixed( step.getDecimals() ) );
+}
+}
+// Trigger change event
+$qty.trigger( 'change' );
+});
+});
+</script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked">
+(function () {
+var c = document.body.className;
+c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+document.body.className = c;
+})();
+</script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.selectBox.min.js?ver=1.2.0" id="jquery-selectBox-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="//haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min.js?ver=3.1.6" id="prettyPhoto-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" id="jquery-yith-wcwl-js-extra">
+/* <![CDATA[ */
+var yith_wcwl_l10n = {"ajax_url":"\/wp-admin\/admin-ajax.php","redirect_to_cart":"no","multi_wishlist":"","hide_add_button":"1","enable_ajax_loading":"1","ajax_loader_url":"https:\/\/haisanngoctrinh.com\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg","remove_from_wishlist_after_add_to_cart":"1","is_wishlist_responsive":"1","time_to_close_prettyphoto":"3000","fragments_index_glue":".","reload_on_found_variation":"1","mobile_media_query":"768","labels":{"cookie_disabled":"We are sorry, but this feature is available only if cookies on your browser are enabled.","added_to_cart_message":"<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>"},"actions":{"add_to_wishlist_action":"add_to_wishlist","remove_from_wishlist_action":"remove_from_wishlist","reload_wishlist_and_adding_elem_action":"reload_wishlist_and_adding_elem","load_mobile_action":"load_mobile","delete_item_action":"delete_item","save_title_action":"save_title","save_privacy_action":"save_privacy","load_fragments":"load_fragments"},"nonce":{"add_to_wishlist_nonce":"b27eff0e46","remove_from_wishlist_nonce":"f71971d7e5","reload_wishlist_and_adding_elem_nonce":"2f87f6a911","load_mobile_nonce":"5de2f1cf5a","delete_item_nonce":"e645e7c15a","save_title_nonce":"5e2b5a7f9f","save_privacy_nonce":"314996121d","load_fragments_nonce":"9a9a0ecaee"}};
+/* ]]> */
+</script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.min.js?ver=3.2.0" id="jquery-yith-wcwl-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" id="jquery-yith-wcwl-js-after">
+jQuery( function( $ ) {
+$( document ).on( 'added_to_wishlist removed_from_wishlist', function() {
+$.get( yith_wcwl_l10n.ajax_url, {
+action: 'yith_wcwl_update_wishlist_count'
+}, function( data ) {
+$('.yith-wcwl-items-count').html( data.count );
+} );
+} );
+} );
+</script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7" id="regenerator-runtime-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/haisanngoctrinh.com\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.5.2" id="contact-form-7-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.5.9.0" id="jquery-blockui-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"https:\/\/haisanngoctrinh.com\/gio-hang\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.9.0" id="wc-add-to-cart-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.5.9.0" id="js-cookie-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=5.9.0" id="woocommerce-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" id="wc-cart-fragments-js-extra">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_29480d1f1fb9257a947e05a462ce9e92","fragment_name":"wc_fragments_29480d1f1fb9257a947e05a462ce9e92","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.9.0" id="wc-cart-fragments-js"></script>
+<script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src="https://haisanngoctrinh.com/wp-includes/js/wp-embed.min.js?ver=5.8.3" id="wp-embed-js"></script>
+</div></body>
+</html><!-- WP Fastest Cache file was created in 0.57615208625793 seconds, on 23-01-22 4:51:25 -->

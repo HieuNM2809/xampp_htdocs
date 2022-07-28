@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <meta name="description" content="&lt;p&gt;&lt;strong&gt;Mực cắt khoanh&lt;/strong&gt; c&amp;oacute; thể x&amp;agrave;o c&amp;ugrave;ng ớt chu&amp;ocirc;ng rau củ, hấp gừng, nấu lẩu, chi&amp;ecirc;n x&amp;ugrave;, nấu ch&amp;aacute;o,...&lt;/p&gt;
+
+&lt;figure class=&quot;easyimage easyimage-full&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;data:image/jpeg;base64,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&quot; width=&quot;275&quot; /&gt;
+&lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;">
+    <meta name="keywords" content="muc-cat-khoanh">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <link rel="canonical" href="https://thucphamtuyetlinh.com/chi-tiet/muc-cat-khoanh">
+    <meta name="author" content>
+    <link rel="icon" type="image/x-icon" href>
+
+    
+      
+      <meta property="og:site_name" content="thucphamtuyetlinh.com">
+      <meta property="og:description" content="&lt;p&gt;&lt;strong&gt;Mực cắt khoanh&lt;/strong&gt; c&amp;oacute; thể x&amp;agrave;o c&amp;ugrave;ng ớt chu&amp;ocirc;ng rau củ, hấp gừng, nấu lẩu, chi&amp;ecirc;n x&amp;ugrave;, nấu ch&amp;aacute;o,...&lt;/p&gt;
+
+&lt;figure class=&quot;easyimage easyimage-full&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;data:image/jpeg;base64,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&quot; width=&quot;275&quot; /&gt;
+&lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;">
+      <meta property="og:title" content="Mực cắt khoanh">
+      <meta property="og:url" content="https://thucphamtuyetlinh.com/chi-tiet/muc-cat-khoanh">
+      <meta property="og:type" content="website">
+        
+    
+    <title>Mực cắt khoanh</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+     <link href="css/sweetalert.css" rel="stylesheet">
+     <link rel="shortcut icon" href="images/logoNBT_2.png">
+    <link href="css/icon_chat.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144-precomposed_2.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114-precomposed_2.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72-precomposed_2.png">
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57-precomposed_2.png">
+    <!--Icon chat-->
+    <div class="hotline-phone-ring-wrap">		
+			<div class="hotline-phone-ring">
+			<div class="hotline-phone-ring-circle"></div>
+			<div class="hotline-phone-ring-circle-fill"></div>
+			<div class="hotline-phone-ring-img-circle"> <a href="tel:0938062112" class="pps-btn-img"> <img src="https://netweb.vn/img/hotline/icon.png" alt="so dien thoai" width="100%"> </a></div>
+		</div>		
+		<div class="hotline-bar"> 
+			<a href="tel:0938062112"><span class="text-hotline">0938062112</span> </a>
+		</div>			 
+		
+</div>
+
+
+
+<div class="float-icon-hotline">			
+		<ul class="left-icon hotline">
+			<li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="https://zalo.me/0938062112"><i class="fa fa-zalo animated infinite tada"></i><span>Zalo</span></a></li>
+			<li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="https://www.facebook.com/ThucPhamDongLanhTuyetLinh/"><i class="fa fa-messenger animated infinite tada"></i><span>Facebook</span></a></li>
+		</ul>		
+</div>
+</head><!--/head-->
+
+<body>
+
+    <header id="header"><!--header-->
+       <!--/header_top-->
+        
+        
+        <div class="header-middle"><!--header-middle-->
+            <div class="container">
+                <div class="row" style="display: inline;">
+                    <div class="col-md-8 clearfix">
+                        <div class="logo pull-left">
+                            <a href="trang-chu.html"><img src="images/logoNBT.png" alt></a>
+                        </div>
+                        <div class="btn-group1 pull-right clearfix">
+                            
+                            <div class="btn-group" style=" text-align: justify;font-size:15px; font-weight: bold" ">
+                                <a href>✨ Khách mua sỉ vui lòng liên hệ trực tiếp</a><br>
+                                <a href="tel:0938 062 112">✨ Hotline: 0938 062 112 Ms.Linh</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 clearfix">
+                        <div class="shop-menu clearfix pull-right" style="justify-content: center; display: flex;">
+                            <ul class="nav navbar-nav">
+                                                               <li><a style="font-weight: bold;" href="gio-hang.html"><i class="fa fa-crosshairs"></i> THANH TOÁN</a></li>
+                                                               <li><a style="font-weight: bold;" href="gio-hang.html"><i class="fa fa-shopping-cart"></i>GIỎ HÀNG </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+
+        <div class="header-bottom clearfix" style="background-color: #01DFD7;"><!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a href="trang-chu.html" class="active" style="font-weight: bold;">TRANG CHỦ</a></li>
+                                 <li><a href="gioi-thieu.html" style="font-weight: bold;">GIỚI THIỆU</a></li>
+                                 
+                                 <li><a href="bang-gia.html" style="font-weight: bold;">BẢNG GIÁ SỈ</a></li>
+                                 
+                                <!-- <li class="dropdown"><a href="#" style="font-weight: bold;">BỮA CƠM GIA ĐÌNH<i class="fa fa-angle-down"></i></a>-->
+                                <!--    <ul role="menu" class="sub-menu" >-->
+                                         
+                                <!--        <li> <a class="dropdown-item" href="https://thucphamtuyetlinh.com/danh-muc/thit-ca">Thịt cá </a></li>-->
+                                <!--        <li> <a class="dropdown-item" href="https://thucphamtuyetlinh.com/danh-muc/rau-cu-qua">Rau củ quả</a></li>-->
+                                <!--        <li> <a class="dropdown-item" href="https://thucphamtuyetlinh.com/danh-muc/gia-vi">Gia vị, nước chấm, dầu ăn </a></li>-->
+                                        
+                                <!--    </ul>-->
+                                <!--</li> -->
+                                
+                                <li class="dropdown"><a href="#" style="font-weight: bold;">DANH MUC SẢN PHẨM<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                         <li> <a class="dropdown-item" href="ca-bien.html">Cá </a></li>
+                                         <li> <a class="dropdown-item" href="so-diep.html">Sò điệp</a></li>
+                                         <li> <a class="dropdown-item" href="hao.html">Hào</a></li>
+                                        <li> <a class="dropdown-item" href="muc.html">Mực</a></li>
+                                        <li> <a class="dropdown-item" href="ga.html">Gà </a></li>
+                                        <li> <a class="dropdown-item" href="ech.html">Ếch </a></li>
+                                        <li> <a class="dropdown-item" href="thit-ghe.html">Thịt ghẹ </a></li>
+                                        
+                                        <li> <a class="dropdown-item" href="heo.html">Heo </a></li>
+                                        <li> <a class="dropdown-item" href="khoai-tay.html">Khoai tây </a></li>
+                                        <li> <a class="dropdown-item" href="mat-hang-che-bien.html">Mặt hàng chế biến </a></li>
+                                    </ul>
+                                </li>  
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                     
+                        <form action="https://thucphamtuyetlinh.com/tim-kiem" method="POST">
+                            <input type="hidden" name="_token" value="J4uZAgU8r2iBGPwN0rmcJ1TvaT5i1QRwxpsKjgwG">
+                        <div class="search_box pull-right">
+                           <input type="text" name="keywords_submit" placeholder="Nhập tên hàng cần tìm.." style="-webkit-border-radius: 15px;">
+                           <input type="submit" style="margin-top:0;color:#666;width: 40px;-webkit-border-radius: 15px;font-weight: bold;height: 35assetpx;" name="search_items" class="btn btn-primary btn-sm" value="Tìm">
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+    
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="left-sidebar">
+
+                    </div>
+                </div>
+                
+                <div class="col-sm-12 padding-right">
+
+                   <head><link href="css/icon_chat.css" rel="stylesheet"></head>
+<div class="product-details"><!--product-details-->
+	        <div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="index.html">Trang chủ</a></li>
+				  <li class="active" style="font-size: 20px;">/ Chi tiết sản phẩm > Mực cắt khoanh</li>
+				</ol>
+			</div>
+						<div class="col-sm-5">
+							<div class="view-product">
+								<img style=" -webkit-border-radius: 10px;" src="images/1867cd821e9becc5b58a920.jpg" alt>
+								
+							</div>
+						</div>
+						
+						<div class="col-sm-7">
+							<div class="product-information" style="background-color: #F7F7F0; -webkit-border-radius: 10px;"><!--/product-information-->
+								<img src="images/new.jpg" class="newarrival" alt>
+								<h2>Mực cắt khoanh</h2>
+								<p>Mã ID: 146</p>
+								<img src="images/rating.png" alt>
+								
+								<form action="https://thucphamtuyetlinh.com/save-cart" method="POST">
+									<input type="hidden" name="_token" value="J4uZAgU8r2iBGPwN0rmcJ1TvaT5i1QRwxpsKjgwG">									<input type="hidden" value="146" class="cart_product_id_146">
+                                            <input type="hidden" value="Mực cắt khoanh" class="cart_product_name_146">
+                                            <input type="hidden" value="1867cd821e9becc5b58a920.jpg" class="cart_product_image_146">
+                                            <input type="hidden" value="120000" class="cart_product_price_146">
+                                          
+								<span>
+									<span>120.000VNĐ</span>
+								
+									<label>Số lượng:</label>
+									<input style="width:60px;" name="qty" type="number" min="1" class="cart_product_qty_146" value="1">
+									<input name="productid_hidden" type="hidden" value="146">
+								</span>
+								<input type="button" value="Thêm giỏ hàng" class="btn btn-primary btn-sm add-to-cart" data-id_product="146" name="add-to-cart">
+								</form>
+
+								<p><b>Tình trạng:</b> Còn hàng</p>
+								<p><b>Đơn vị tính/Quy cách:</b> kg</p>
+								<p><b>Danh mục:</b> Mực</p>
+								<!--<p><b>Thương hiệu:</b> Thực Phẩm Đông Lạnh - Tuyết Linh</p>-->
+								
+								<p style="font-weight:bold;color:red"><b style="color:black">Chú ý:</b> Nếu quý khách muốn mua sỉ. Vui lòng liên hệ <a style="color:blue" href="tel:0938062112"> 0938 062 112 gặp Linh </a> để mua hàng với giá tốt nhất.</p>
+								<a href><img src="images/share.png" class="share img-responsive" alt></a>
+							</div><!--/product-information-->
+
+						</div>
+</div><!--/product-details-->
+
+					<div class="category-tab shop-details-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#details" data-toggle="tab">Mô tả</a></li>
+								<li><a href="#companyprofile" data-toggle="tab">Chi tiết sản phẩm</a></li>
+							
+								
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="details">
+								<p></p><p><strong>Mực cắt khoanh</strong> c&oacute; thể x&agrave;o c&ugrave;ng ớt chu&ocirc;ng rau củ, hấp gừng, nấu lẩu, chi&ecirc;n x&ugrave;, nấu ch&aacute;o,...</p>
+
+<figure class="easyimage easyimage-full"><img alt src="data:image/jpeg;base64,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" width="275">
+<figcaption></figcaption>
+</figure><p></p>
+								
+								
+							</div>
+							
+							<div class="tab-pane fade" id="companyprofile">
+								<p></p><p><strong>Mực cắt khoanh</strong> l&agrave; mực tươi sau khi đ&aacute;nh bắt được sơ chế, sau đ&oacute; cắt khoanh v&agrave; l&agrave;m đ&ocirc;ng ngay n&ecirc;n vừa đảm bảo chất lượng, vừa tiết kiệm thời gian chế biến cho người mua.</p>
+
+<p>#muccatkhoanh #muctuoi #muccatkhoanhmalaysia</p>
+
+<p>keyword(mực cắt khoanh&nbsp;malaysia,&nbsp;mực cắt khoanh&nbsp;đ&ocirc;ng lạnh,&nbsp;mực cắt khoanh&nbsp;tẩm bột, mực ống cắt khoanh đ&ocirc;ng lạnh,&nbsp;gi&aacute; mực ống cắt khoanh)</p><p></p>
+								
+						
+							</div>
+						
+							<div class="fb-comments" data-href="https://thucphamtuyetlinh.com/chi-tiet/muc-cat-khoanh" data-numposts="30" data-width="100%"></div>
+							
+							
+						</div>
+					</div><!--/category-tab-->
+						<div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">Sản phẩm liên quan</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="item active">
+															
+									<div class="col-sm-3 col-xs-6">
+										<div class="product-image-wrapper">
+											 <div class="single-products">
+		                                        <div class="productinfo text-center" style="background-color: #F7F7F0; -webkit-border-radius: 10px;">
+		                                        	 <form>
+		                                                <input type="hidden" name="_token" value="J4uZAgU8r2iBGPwN0rmcJ1TvaT5i1QRwxpsKjgwG">		                                            <input type="hidden" value="44" class="cart_product_id_44">
+		                                            <input type="hidden" value="Mực nắng Phan Thiết" class="cart_product_name_44">
+		                                            <input type="hidden" value="Mực 1 nắng PT16.jpg" class="cart_product_image_44">
+		                                            <input type="hidden" value="230000" class="cart_product_price_44">
+		                                            <input type="hidden" value="1" class="cart_product_qty_44">
+
+		                                            <a href="muc-nang-phan-thiet.html">
+		                                                <img style="-webkit-border-radius: 10px;" src="images/M%C3%A1%C2%BB%C2%B1c%201%20n%C3%A1%C2%BA%C2%AFng%20PT16.jpg" alt>
+		                                                <h2>230.000 VNĐ</h2>
+		                                                <p>Mực nắng Phan Thiết</p>
+
+		                                             
+		                                             </a>
+		                                            <input style="font-weight: bold;" type="button" value="Thêm giỏ hàng" class="btn btn-default add-to-cart" data-id_product="44" name="add-to-cart">
+		                                            </form>
+		                                        </div>
+		                                      
+                                			</div>
+										</div>
+									</div>
+								
+															
+									<div class="col-sm-3 col-xs-6">
+										<div class="product-image-wrapper">
+											 <div class="single-products">
+		                                        <div class="productinfo text-center" style="background-color: #F7F7F0; -webkit-border-radius: 10px;">
+		                                        	 <form>
+		                                                <input type="hidden" name="_token" value="J4uZAgU8r2iBGPwN0rmcJ1TvaT5i1QRwxpsKjgwG">		                                            <input type="hidden" value="45" class="cart_product_id_45">
+		                                            <input type="hidden" value="Răng mực nhỏ" class="cart_product_name_45">
+		                                            <input type="hidden" value="Răng mực nhỏ 29.jpg" class="cart_product_image_45">
+		                                            <input type="hidden" value="130000" class="cart_product_price_45">
+		                                            <input type="hidden" value="1" class="cart_product_qty_45">
+
+		                                            <a href="rang-muc.html">
+		                                                <img style="-webkit-border-radius: 10px;" src="images/R%C3%84_ng%20m%C3%A1%C2%BB%C2%B1c%20nh%C3%A1%C2%BB_%2029.jpg" alt>
+		                                                <h2>130.000 VNĐ</h2>
+		                                                <p>Răng mực nhỏ</p>
+
+		                                             
+		                                             </a>
+		                                            <input style="font-weight: bold;" type="button" value="Thêm giỏ hàng" class="btn btn-default add-to-cart" data-id_product="45" name="add-to-cart">
+		                                            </form>
+		                                        </div>
+		                                      
+                                			</div>
+										</div>
+									</div>
+								
+															
+									<div class="col-sm-3 col-xs-6">
+										<div class="product-image-wrapper">
+											 <div class="single-products">
+		                                        <div class="productinfo text-center" style="background-color: #F7F7F0; -webkit-border-radius: 10px;">
+		                                        	 <form>
+		                                                <input type="hidden" name="_token" value="J4uZAgU8r2iBGPwN0rmcJ1TvaT5i1QRwxpsKjgwG">		                                            <input type="hidden" value="46" class="cart_product_id_46">
+		                                            <input type="hidden" value="Mực 100% trứng" class="cart_product_name_46">
+		                                            <input type="hidden" value="Mực 100 trứng24.jpg" class="cart_product_image_46">
+		                                            <input type="hidden" value="195000" class="cart_product_price_46">
+		                                            <input type="hidden" value="1" class="cart_product_qty_46">
+
+		                                            <a href="muc-100-trung.html">
+		                                                <img style="-webkit-border-radius: 10px;" src="images/M%C3%A1%C2%BB%C2%B1c%20100%20tr%C3%A1%C2%BB%C2%A9ng24.jpg" alt>
+		                                                <h2>195.000 VNĐ</h2>
+		                                                <p>Mực 100% trứng</p>
+
+		                                             
+		                                             </a>
+		                                            <input style="font-weight: bold;" type="button" value="Thêm giỏ hàng" class="btn btn-default add-to-cart" data-id_product="46" name="add-to-cart">
+		                                            </form>
+		                                        </div>
+		                                      
+                                			</div>
+										</div>
+									</div>
+								
+															
+									<div class="col-sm-3 col-xs-6">
+										<div class="product-image-wrapper">
+											 <div class="single-products">
+		                                        <div class="productinfo text-center" style="background-color: #F7F7F0; -webkit-border-radius: 10px;">
+		                                        	 <form>
+		                                                <input type="hidden" name="_token" value="J4uZAgU8r2iBGPwN0rmcJ1TvaT5i1QRwxpsKjgwG">		                                            <input type="hidden" value="143" class="cart_product_id_143">
+		                                            <input type="hidden" value="Răng  mực lớn" class="cart_product_name_143">
+		                                            <input type="hidden" value="Răng mực lớn 33.jpg" class="cart_product_image_143">
+		                                            <input type="hidden" value="140000" class="cart_product_price_143">
+		                                            <input type="hidden" value="1" class="cart_product_qty_143">
+
+		                                            <a href="rang-muc-lon.html">
+		                                                <img style="-webkit-border-radius: 10px;" src="images/R%C3%84_ng%20m%C3%A1%C2%BB%C2%B1c%20l%C3%A1%C2%BB_n%2033.jpg" alt>
+		                                                <h2>140.000 VNĐ</h2>
+		                                                <p>Răng  mực lớn</p>
+
+		                                             
+		                                             </a>
+		                                            <input style="font-weight: bold;" type="button" value="Thêm giỏ hàng" class="btn btn-default add-to-cart" data-id_product="143" name="add-to-cart">
+		                                            </form>
+		                                        </div>
+		                                      
+                                			</div>
+										</div>
+									</div>
+								
+															
+									<div class="col-sm-3 col-xs-6">
+										<div class="product-image-wrapper">
+											 <div class="single-products">
+		                                        <div class="productinfo text-center" style="background-color: #F7F7F0; -webkit-border-radius: 10px;">
+		                                        	 <form>
+		                                                <input type="hidden" name="_token" value="J4uZAgU8r2iBGPwN0rmcJ1TvaT5i1QRwxpsKjgwG">		                                            <input type="hidden" value="150" class="cart_product_id_150">
+		                                            <input type="hidden" value="Mực cắt hoa" class="cart_product_name_150">
+		                                            <input type="hidden" value="Muc_Cat_Hoa54.jpg" class="cart_product_image_150">
+		                                            <input type="hidden" value="85000" class="cart_product_price_150">
+		                                            <input type="hidden" value="1" class="cart_product_qty_150">
+
+		                                            <a href="muc-cat-hoa.html">
+		                                                <img style="-webkit-border-radius: 10px;" src="images/Muc_Cat_Hoa54.jpg" alt>
+		                                                <h2>85.000 VNĐ</h2>
+		                                                <p>Mực cắt hoa</p>
+
+		                                             
+		                                             </a>
+		                                            <input style="font-weight: bold;" type="button" value="Thêm giỏ hàng" class="btn btn-default add-to-cart" data-id_product="150" name="add-to-cart">
+		                                            </form>
+		                                        </div>
+		                                      
+                                			</div>
+										</div>
+									</div>
+								
+									
+
+								
+								</div>
+									
+							</div>
+									
+						</div>
+					</div><!--/recommended_items-->
+					  <ul class="pagination pagination-sm m-t-none m-b-none">
+                       <ul class="pagination" role="navigation">
+        
+                    <li class="page-item">
+                <a class="page-link" href="muc-cat-khoanh_2.html" rel="prev" aria-label="&laquo; Previous">&lsaquo;</a>
+            </li>
+        
+        
+                    
+            
+            
+                                                                        <li class="page-item"><a class="page-link" href="muc-cat-khoanh_2.html">1</a></li>
+                                                                                <li class="page-item active" aria-current="page"><span class="page-link">2</span></li>
+                                                        
+        
+                    <li class="page-item disabled" aria-disabled="true" aria-label="Next &raquo;">
+                <span class="page-link" aria-hidden="true">&rsaquo;</span>
+            </li>
+            </ul>
+
+                      </ul>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="footer"><!--Footer-->
+        <div class="footer-top">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="companyinfo">
+                            <h2 style="text-align: justify-all;"><span>Thực phẩm Tuyết Linh</span><br>SẢN PHẨM BÁN CHẠY</h2>
+                            <p>Luôn mang đến sản phẩm an toàn chất lượng - giá cả hợp lý.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a>
+                                    <div class="iframe-img">
+                                        <img src="images/CaTrung.jpg" alt>
+                                    </div>
+                                    
+                                </a>
+                                <p>Cá Trứng</p>
+                                <h2>Top 1 bán chạy</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a>
+                                    <div class="iframe-img">
+                                         <img src="images/MucTrung12UP.jpg" alt>
+                                    </div>
+                                   
+                                </a>
+                                <p>Mực trứng</p>
+                                <h2>Top 2 bán chạy</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a>
+                                    <div class="iframe-img">
+                                         <img src="images/SunGa.jpg" alt>
+                                    </div>
+                                    
+                                </a>
+                                <p>Sụn gà</p>
+                                <h2>Top 3 bán chạy</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a>
+                                    <div class="iframe-img">
+                                         <img src="images/CaNgu%C3%84_aiDuong.jpg" alt>
+                                    </div>
+                                    
+                                </a>
+                                <p>Cá ngừ đại dương</p>
+                                <h2>Top 4 bán chạy</h2>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="address">
+                            <a href="https://goo.gl/maps/8AXC7Vc289D5tUey5">
+                            <img src="images/vitri.png" alt>
+                            <p>Thực phẩm đông lạnh Tuyết Linh</p>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="single-widget">
+                            <h2>Hãy theo dõi chúng tôi trên Facebook </h2><a href="https://www.facebook.com/ThucPhamDongLanhTuyetLinh">Xem chi tiết…</a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><div class="fb-page" data-href="https://www.facebook.com/ThucPhamDongLanhTuyetLinh" data-tabs="timeline" data-width data-height="230" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ThucPhamDongLanhTuyetLinh" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ThucPhamDongLanhTuyetLinh">Thực Phẩm Đông Lạnh Tuyết Linh</a></blockquote></div></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="single-widget">
+                            <h2>THÔNG TIN LIÊN HỆ</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="https://goo.gl/maps/8AXC7Vc289D5tUey5" style="font-weight: bold;"><i class="fa fa-map-marker"></i>Địa chỉ sản xuất: 6C/25T đường Giao Thông Hòa, ấp 3, xã Tân Quý Tây, huyện Bình Chánh, TP.HCM </a></li>
+                                <li><a href="https://goo.gl/maps/8AXC7Vc289D5tUey5" style="font-weight: bold;"><i class="fa fa-map-marker"></i>Địa chỉ cửa hàng: D1/22 QL1A thị trấn Tân Túc, huyện Bình Chánh, TP>HCM </a></li>
+                                <li><a href="tel:093 806 2112" style="font-weight: bold;"><i class="fa fa-phone"></i> Phone:093 806 2112 </a></li>
+                                <li><a href="mailto:nguyentuyetlinh@gmail.com" style="font-weight: bold;"><i class="fa fa-envelope"></i>Email: nguyentuyetlinh@gmail.com</a></li>
+                                 <p style="text-align: justify; font-size: 20px;">Mã số doanh nghiệp: 0312415715</p>
+                                <p style="text-align: justify;font-size: 20px;">Do sở Kế Hoạch và Đầu Tư TPHCM cấp ngày 13/08/2013</p>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    
+                   
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                   <p class="pull-left">Copyright © 2013 Thực phẩm Tuyết Linh. All rights reserved.</p>
+                    <p class="pull-right">CHÚC BẠN 1 NGÀY VUI VẺ VÀ TRÀN ĐẦY HẠNH PHÚC.</p>
+                </div>
+            </div>
+        </div>
+        
+    </footer><!--/Footer-->
+    
+
+  
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/api.js" async defer></script>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="js/sdk.js#xfbml=1&amp;version=v7.0" nonce="X9Swk41r"></script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<!--      <div id="fb-root"></div>-->
+<!--      <script>-->
+<!--        window.fbAsyncInit = function() {-->
+<!--          FB.init({-->
+<!--            xfbml            : true,-->
+<!--            version          : 'v7.0'-->
+<!--          });-->
+<!--        };-->
+
+<!--        (function(d, s, id) {-->
+<!--        var js, fjs = d.getElementsByTagName(s)[0];-->
+<!--        if (d.getElementById(id)) return;-->
+<!--        js = d.createElement(s); js.id = id;-->
+<!--        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';-->
+<!--        fjs.parentNode.insertBefore(js, fjs);-->
+<!--      }(document, 'script', 'facebook-jssdk'));</script>-->
+
+      <!-- Your Chat Plugin code -->
+<!--      <div class="fb-customerchat"-->
+<!--        attribution=setup_tool-->
+<!--        page_id="115869508989456"-->
+<!--  theme_color="#44bec7">-->
+<!--      </div>-->
+      
+    <script type="text/javascript">
+
+          $(document).ready(function(){
+            $('.send_order').click(function(){
+                swal({
+                  title: "Xác nhận đơn hàng",
+                  text: "Đơn hàng sẽ không được hoàn trả khi đặt,bạn có muốn đặt không?",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonClass: "btn-danger",
+                  confirmButtonText: "Xác nhận mua hàng",
+
+                    cancelButtonText: "Đóng,chưa mua",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function(isConfirm){
+                     if (isConfirm) {
+                        
+                        var shipping_name = $('.shipping_name').val();
+                        var shipping_address = $('.shipping_address').val();
+                        var shipping_phone = $('.shipping_phone').val();
+                        var shipping_notes = $('.shipping_notes').val();
+                        var shipping_method = $('.payment_select').val();
+                        var order_fee = $('.order_fee').val();
+                        var order_coupon = $('.order_coupon').val();
+                        var _token = $('input[name="_token"]').val();
+                        if(shipping_name == '' || shipping_address == '' || shipping_phone == '' || shipping_notes=='') {
+                            swal("Thiếu thông tin nhận hàng", "Quý khách vui lòng điền đầy đủ thông tin nhận hàng. Xin cám ơn.", "error");
+                        } else {
+                             if (shipping_method=='1') {
+                                $.ajax({
+                                    url: 'https://thucphamtuyetlinh.com/confirm-order',
+                                    method: 'POST',
+                                    data:{shipping_name:shipping_name,shipping_address:shipping_address,shipping_phone:shipping_phone,shipping_notes:shipping_notes,_token:_token,shipping_method:shipping_method},
+                                    success:function(){
+                                       swal("Đặt hàng thành công", "Đơn hàng của bạn đã được gửi thành công, sẽ có nhân viên gọi xác nhận trong ít phút nữa. Cảm ơn quý khách đã mua hàng.", "success");
+                                    }
+                                });
+                                 
+                                window.setTimeout(function(){ 
+                                    location.reload();
+                                } ,3000);
+                            }else if(shipping_method=='0'){
+                                 $.ajax({
+                                    url: 'https://thucphamtuyetlinh.com/confirm-order',
+                                    method: 'POST',
+                                     data:{shipping_name:shipping_name,shipping_address:shipping_address,shipping_phone:shipping_phone,shipping_notes:shipping_notes,_token:_token,order_fee:order_fee,order_coupon:order_coupon,shipping_method:shipping_method},
+                                    success:function(){
+                                       
+                                       window.location.href = 'https://thucphamtuyetlinh.com/thong-tin-chuyen-khoan'
+                                    }
+                                });
+                               
+                            }
+                        }
+                      } else {
+                        swal("Đóng", "Đơn hàng chưa được gửi, Vui lòng hoàn tất đơn hàng", "error");
+
+                      }
+              
+                });
+
+               
+            });
+        });
+    
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.add-to-cart').click(function(){
+
+                var id = $(this).data('id_product');
+                // alert(id);
+                var cart_product_id = $('.cart_product_id_' + id).val();
+                var cart_product_name = $('.cart_product_name_' + id).val();
+                var cart_product_image = $('.cart_product_image_' + id).val();
+                var cart_product_price = $('.cart_product_price_' + id).val();
+                var cart_product_qty = $('.cart_product_qty_' + id).val();
+                var _token = $('input[name="_token"]').val();
+                $.ajax({
+                    url: 'https://thucphamtuyetlinh.com/add-cart-ajax',
+                    method: 'POST',
+                    data:{cart_product_id:cart_product_id,cart_product_name:cart_product_name,cart_product_image:cart_product_image,cart_product_price:cart_product_price,cart_product_qty:cart_product_qty,_token:_token},
+                    success:function(){
+
+                        swal({
+                                title: "Đã thêm sản phẩm vào giỏ hàng",
+                                text: "Bạn có thể mua hàng tiếp hoặc tới giỏ hàng để tiến hành thanh toán",
+                                showCancelButton: true,
+                                cancelButtonText: "Xem tiếp",
+                                confirmButtonClass: "btn-success",
+                                confirmButtonText: "Đi đến giỏ hàng",
+                                closeOnConfirm: false
+                            },
+                            function() {
+                                cart_product_id = '',
+                                cart_product_name ='';
+                                cart_product_image ='';
+                                cart_product_price ='';
+                                cart_product_qty = '';
+                                _token ='';
+                                window.location.href = "https://thucphamtuyetlinh.com/gio-hang";
+                            });
+
+                    }
+
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.choose').on('change',function(){
+            var action = $(this).attr('id');
+            var ma_id = $(this).val();
+            var _token = $('input[name="_token"]').val();
+            var result = '';
+           
+            if(action=='city'){
+                result = 'province';
+            }else{
+                result = 'wards';
+            }
+            $.ajax({
+                url : 'https://thucphamtuyetlinh.com/select-delivery-home',
+                method: 'POST',
+                data:{action:action,ma_id:ma_id,_token:_token},
+                success:function(data){
+                   $('#'+result).html(data);     
+                }
+            });
+        });
+        });
+          
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.calculate_delivery').click(function(){
+                var matp = $('.city').val();
+                var maqh = $('.province').val();
+                var xaid = $('.wards').val();
+                var _token = $('input[name="_token"]').val();
+                if(matp == '' && maqh =='' && xaid ==''){
+                    alert('Làm ơn chọn để tính phí vận chuyển');
+                }else{
+                    $.ajax({
+                    url : 'https://thucphamtuyetlinh.com/calculate-fee',
+                    method: 'POST',
+                    data:{matp:matp,maqh:maqh,xaid:xaid,_token:_token},
+                    success:function(){
+                       location.reload(); 
+                    }
+                    });
+                }
+
+        });
+    });
+    </script>
+    
+    <script src="js/jquery.min.js"></script>
+  <script type="text/javascript">
+     $(document).ready(function() {
+          if(window.innerWidth > 480) {
+            $("#form_desktop").css('display','block');
+            $("#form_mobile").css('display','none');
+        } else if(window.innerWidth <= 480) {
+         
+         $("#form_desktop").css('display','none');
+        $("#form_mobile").css('display','block');
+        }
+     })
+     
+
+ 
+  </script>
+</body>
+</html>
