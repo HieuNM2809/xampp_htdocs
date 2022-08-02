@@ -1,0 +1,9 @@
+//==================  Rate-limiting and throttle ================================
+
+
+//1. Setup redis:
+=> https://viblo.asia/p/to-da-su-dung-redis-trong-laravel-nhu-the-nao-4P856d89ZY3
+
+//2.Read dcoumenent:
+=>  https://laravel.com/docs/9.x/rate-limiting#introduction
+=>  https://viblo.asia/q/loi-throttle-trong-laravel-Q75wn9WMlWb
