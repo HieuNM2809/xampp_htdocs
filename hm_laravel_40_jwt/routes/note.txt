@@ -1,0 +1,3 @@
+
+// Link tham khảo: https://www.positronx.io/laravel-jwt-authentication-tutorial-user-login-signup-api/
+// composer require tymon/jwt-auth  --ignore-platform-reqs
