@@ -1,6 +1,4 @@
 //==================  Rate-limiting and throttle ================================
-// Giúp giới hạn lại số lượng truy cập của người dùng
-// VD: đăng nhập sai nhiều lần thì cho đợi 
 
 
 //1. Setup redis:
