@@ -1,0 +1,8 @@
+-  =======================  download tất cả file trên 1 trang web trên mạng
+
+Link tham khảo: https://codingshiksha.com/javascript/node-js-script-to-download-website-source-code-htmlcssjs-files-from-url-for-offline-use-using-node-site-downloader-library-full-project-for-beginners/
+
+1. npm init -y
+2. npm i node-site-downloader hoặc  npm i -g node-site-downloader 
+3. node-site-downloader download DOMAIN START_POINT OUTPUT_FOLDER [VERBOSE] [OUTPUT_FOLDER_SUFFIX] [INCLUDE_IMAGES]
+4. node index.js
