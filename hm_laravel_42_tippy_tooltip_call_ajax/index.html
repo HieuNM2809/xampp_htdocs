@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Tippy</title>
+  </head>
+  <body>
+    <button id="myButton">My button</button>
+
+    <script src="./lib/popper.min.js"></script>
+    <script src="./lib/tippy-bundle.umd.min.js"></script>
+    <script>
+       tippy('#myButton', {
+          content: 'Loading...',
+          trigger: "click",
+          hideOnClick: true,
+          onCreate(instance) {
+            // Setup our own custom state properties
+            instance._isFetching = false;
+            instance._src = null;
+            instance._error = null;
+          },
+          onShow(instance) {
+            if (instance._isFetching || instance._src || instance._error) {
+              return;
+            }
+
+            instance._isFetching = true;
+
+            fetch('https://unsplash.it/200/?random')
+              .then((response) => response.blob())
+              .then((blob) => {
+                  // Convert the blob into a URL
+                  const url = URL.createObjectURL(blob);
+                  // Create an image
+                  const image = new Image();
+                  image.width = 200;
+                  image.height = 200;
+                  image.style.display = 'block';
+                  image.src = url;
+                  // Update the tippy content with the image
+                  instance.setContent(image);
+              })
+              .catch((error) => {
+                instance._error = error;
+                instance.setContent(`Request failed. ${error}`);
+              })
+              .finally(() => {
+                instance._isFetching = false;
+              });
+          },
+          onHidden(instance) {
+            instance.setContent('Loading...');
+            // Unset these properties so new network requests can be initiated
+            instance._src = null;
+            instance._error = null;
+          },
+        });
+    </script>
+  </body>
+</html>
