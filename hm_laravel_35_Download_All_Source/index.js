@@ -5,7 +5,7 @@ const {exec} = require('child_process')
 // const websiteUrl = 'https://hieunm47.github.io/';
 // const websiteUrl = 'https://www.huytruong.design/';
 const websiteUrl = 'https://thucphamtuyetlinh.com/';
-var directoryPath = 'thucphamtuyetlinh-'+Date.now();
+var directoryPath = 'New-123-'+Date.now();
 
 
 exec(`node-site-downloader download -s ${websiteUrl} -d ${websiteUrl} -o ${directoryPath} -v --include-images`,(err,stdout,stderr) =>{
