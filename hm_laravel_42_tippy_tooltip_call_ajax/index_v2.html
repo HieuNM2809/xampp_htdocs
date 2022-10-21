@@ -1,0 +1,89 @@
+<html>
+
+<head>
+  <title>Tippy</title>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/animations/scale.css"/>
+  <style>
+ 
+    .customTooltip-theme {
+      background-color: red;
+    }
+    .customTooltip-theme[data-placement^=top]>.tippy-arrow{
+      border-top-color: blue;
+    }
+    .customTooltip-theme[data-placement^='bottom'] .tippy-arrow {
+      border-bottom-color: blue;
+    }
+    .customTooltip-theme[data-placement^='left'] .tippy-arrow {
+      border-left-color: blue;
+    }
+    .customTooltip-theme[data-placement^='right'] .tippy-arrow {
+      border-right-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="height: 300px;background-color: gray;"></div>
+  <button id="myButton">My button</button>
+  <div style="height: 300px;background-color: gray;"></div>
+  <div style="height: 300px;background-color: gray;"></div>
+  <div style="height: 300px;background-color: gray;"></div>
+
+  <script src="https://unpkg.com/popper.js@1"></script>
+  <script src="https://unpkg.com/tippy.js@5"></script>
+  <script>
+    tippy('#myButton', {
+      content: 'Loading...',
+      trigger: "click",
+      hideOnClick: true,
+      allowHTML: true,
+      animation: 'scale',
+      theme: 'customTooltip',
+      onCreate(instance) {
+        // Setup our own custom state properties
+        instance._isFetching = false;
+        instance._src = null;
+        instance._error = null;
+      },
+      onShow(instance) {
+        if (instance._isFetching || instance._src || instance._error) {
+          return;
+        }
+
+        instance._isFetching = true;
+
+        fetch('https://unsplash.it/200/?random')
+          .then((response) => response.blob())
+          .then((blob) => {
+            // Convert the blob into a URL
+            const url = URL.createObjectURL(blob);
+            // Create an image
+            const image = new Image();
+            image.width = 200;
+            image.height = 200;
+            image.style.display = 'block';
+            image.src = url;
+            // Update the tippy content with the image
+            // var html = '<button class="btnCustom"><h1>123</h1></button>';
+            instance.setContent(image);
+          })
+          .catch((error) => {
+            instance._error = error;
+            instance.setContent(`Request failed. ${error}`);
+          })
+          .finally(() => {
+            instance._isFetching = false;
+          });
+      },
+      onHidden(instance) {
+        instance.setContent('Loading...');
+        // Unset these properties so new network requests can be initiated
+        instance._src = null;
+        instance._error = null;
+      },
+    });
+  </script>
+</body>
+
+</html>
