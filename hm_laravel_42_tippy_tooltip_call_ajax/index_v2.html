@@ -3,6 +3,7 @@
 <head>
   <title>Tippy</title>
   <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/animations/scale.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
   <style>
  
     .customTooltip-theme {
@@ -25,7 +26,9 @@
 
 <body>
   <div style="height: 300px;background-color: gray;"></div>
-  <button id="myButton">My button</button>
+  <button class="myButton"  data-test123="button1">My button 1</button>
+  <button class="myButton"  data-test123="button2">My button 2</button>
+  <button class="myButton"  data-test123="button3">My button 3</button>
   <div style="height: 300px;background-color: gray;"></div>
   <div style="height: 300px;background-color: gray;"></div>
   <div style="height: 300px;background-color: gray;"></div>
@@ -33,7 +36,7 @@
   <script src="https://unpkg.com/popper.js@1"></script>
   <script src="https://unpkg.com/tippy.js@5"></script>
   <script>
-    tippy('#myButton', {
+    tippy('.myButton', {
       content: 'Loading...',
       trigger: "click",
       hideOnClick: true,
@@ -52,6 +55,16 @@
         }
 
         instance._isFetching = true;
+
+        // get data tippy
+        console.log(instance.reference.dataset.test123);
+        if(instance.reference.dataset.test123 == 'button1') {
+          console.log(instance.reference.dataset.test123);
+          setTimeout(() => {
+            instance.hide();
+          }, 3000);
+          return;
+        }
 
         fetch('https://unsplash.it/200/?random')
           .then((response) => response.blob())
